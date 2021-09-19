@@ -1,0 +1,150 @@
+<html>
+    <head>
+
+        <style>
+
+            td {
+                border: 3px solid red;
+
+            }
+
+            table {
+                border: 3px solid red;
+                border-collapse: collapse;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="id1"></div>
+
+        <script>
+
+            let tekst = " - liczby są takie same";
+            let x = 0;
+
+            for(let i=0;i<4;i++)
+            {
+                for(let j=0; j<5;j++)
+                {
+                    document.write(x + ".");
+                    document.write(j + "<br>");
+                    if(j==0) 
+                        document.write(tekst+"<br>");
+                    if(j==4) x++;
+                }
+            }
+            document.write("<br> <br>");
+            
+            /*************************/
+
+            let xx=26;
+
+            do
+            {
+                if(xx%5==0)
+                    document.write(xx+";");
+                else
+                    document.write("");
+                xx++;
+
+            }while(xx<63)
+
+            document.write("<br> <br>")
+            
+            /*************************/
+
+
+            function podzielne5(z)
+            {
+                let a = 3;
+
+                do
+                {
+                    if(a%5 == 0)
+                        document.write(a+";");
+                    else
+                        document.write("");
+                    a++;
+                }while(a < z);
+            }
+
+            podzielne5(100);
+
+            document.write("<br> <br>")
+
+            /*************************/
+
+            function podzielne(a,b,c)
+            {
+                do
+                {
+                    if(a == isNaN())
+                    alert("Nieprawidłowe dane!");
+
+                    if(a%c == 0)
+                    document.write(a+";");
+                    else
+                    document.write("");
+                    a++;
+                }while(a < b);
+            }
+
+            podzielne(23,64,7);
+
+            document.write("<br> <br>");
+
+            /*************************/
+
+            function lista_arg(){
+
+                let zawartosc = 0;
+                let i = arguments.length;
+                console.log(arguments);
+
+                for(i=0; i<10; i++)
+                {
+                    if(isNaN(arguments[i]))
+                        alert("Podano zły argument");
+                    else
+                       zawartosc += arguments[i];
+                }
+                document.write("Suma to: " + zawartosc);
+                return arguments[0];
+            }
+            lista_arg(1,2,3,4,5,6,7,8,9,10);
+
+            document.write("<br> <br>");
+
+            /*************************/
+
+            function tabela(){
+
+                let a = arguments.length;
+                console.log(arguments);
+
+                document.write("<table>");
+                document.write("<th>Nr</th>")
+                document.write("<th>Arg</th>")
+
+                for(let i=0;i<a;++i)
+                {
+                    for(let j=1;j<2;++j)
+                    {
+                        document.write("<tr>");
+                        document.write("<td>"+j+"</td>");
+                        document.write("<td>"+arguments[i]+"</td>");
+                        document.write("</tr>");
+                    }
+                }
+                document.write("</table>");
+            }
+
+            tabela(3,4,"n",1);
+        </script>
+
+    </body>
+</html>

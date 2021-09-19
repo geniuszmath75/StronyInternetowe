@@ -1,0 +1,326 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>29.04</title>
+
+    <style>
+        body {
+            font-weight: bold;
+        }
+
+        #zad1,
+        #zad2 {
+            width: 40%;
+            height: 100px;
+        }
+
+        #zad1 {
+            background-color: lightgreen;
+        }
+
+        #zad2 {
+            background-color: lightskyblue;
+        }
+
+        #zad3 {
+            background-color: mediumaquamarine;
+            width: 40%;
+            height: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .kartka {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 250px;
+            border: 5px solid black;
+            border-radius: 5px;
+            background-color: mintcream;
+            box-shadow: 5px 5px 7px;
+        }
+
+        #rok {
+            font-size: 18px;
+            height: 10%;
+        }
+
+        #msc {
+            font-size: 20px;
+            height: 25%;
+        }
+
+        #dzien {
+            font-size: 100px;
+            height: 40%;
+        }
+
+        #tyg {
+            font-size: 20px;
+            height: 25%;
+        }
+
+        #rok,
+        #msc,
+        #dzien,
+        #tyg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="GET"></div>
+    <div id="SET"></div>
+
+    <div id="zad1">
+        ĆWICZENIE 1:<br>
+    </div>
+
+    <div id="zad2">
+        ĆWICZENIE 2:<br>
+        <p id="data"></p>
+        <button onclick="Dodaj()">Tydzień+</button>
+        <button onclick="Odejmij()">Miesiąc-</button>
+    </div>
+
+    <div id="zad3">
+        ĆWICZENIE 3:
+        <div class="kartka">
+            <div id="rok"></div>
+            <div id="msc"></div>
+            <div id="dzien"></div>
+            <div id="tyg"></div>
+        </div>
+    </div>
+    <script>
+        // getDate() - pobiera dzień miesiąca (1-31)
+        // getDay() - pobiera dzień tygodnia (0-6) 0 - NIEDZIELA!!!
+        // getFullYear() - pobiera rok (yyyy)
+        // getHours() - pobiera godziny (0-23) 
+        // getMilliseconds() - pobiera milisekundy (0-999)
+        // getMinutes() - pobiera minuty (0-59)
+        // getMonth() - pobiera miesiąc (0-11)
+        // getSeconds() - pobiera sekundy (0-59)
+        // getTime() - czas od początku ery unixowej(w milisekundach)
+
+        var d = new Date();
+
+        var dd = new Date();
+        var df = new Date();
+        var dm = new Date();
+        var dh = new Date();
+        var dM = new Date();
+        var ds = new Date();
+        var dMi = new Date();
+        var dt = new Date();
+
+        document.getElementById("GET").innerHTML = "<br><br>METODY GET" + "<br><br>";
+
+        document.getElementById("GET").innerHTTML += "Dzień miesiąca: " + d.getDate() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Dzień tygodnia: " + d.getDay() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Rok: " + d.getFullYear() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Godzina: " + d.getHours() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Milisekundy: " + d.getMilliseconds() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Minuty: " + d.getMinutes() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Miesiąc: " + d.getMonth() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Sekundy: " + d.getSeconds() + "<br>";
+
+        document.getElementById("GET").innerHTML += "Czas od początku ery unixowej(w milisekundach): " + d.getTime() +
+            "<br><br>";
+
+        // setDate() - ustawia dzień miesiąca
+        // setFullYear() - ustawia rok
+        // setHours() - ustawia godziny
+        // setMilliseconds() - ustawia milisekundy
+        // setMinutes() - ustawia minuty
+        // setMonth() - ustawia miesiąc
+        // setSeconds() - ustawia sekundy
+        // setTime() - ustawia czas od początku ery unixowej(w milisekundach)
+
+        dd.setDate(23);
+        df.setFullYear(2020);
+        dm.setMonth(11);
+        dh.setHours(22);
+        dM.setMinutes(30);
+        ds.setSeconds(30);
+        dMi.setMilliseconds(900);
+        dt.setTime(1620223143131);
+        document.getElementById("SET").innerHTML = "METODY SET" + "<br><br>";
+
+        document.getElementById("SET").innerHTML += "Zmieniony miesiąc[2]: " + dm + "<br>";
+        document.getElementById("SET").innerHTML += "Zmieniony dzień miesiąca[3]: " + dd + "<br>";
+        document.getElementById("SET").innerHTML += "Zmieniony rok[4]: " + df + "<br>";
+        document.getElementById("SET").innerHTML += "Zmienione godziny[5]: " + dh + "<br>";
+        document.getElementById("SET").innerHTML += "Zmienione minuty[6]: " + dM + "<br>";
+        document.getElementById("SET").innerHTML += "Zmienione sekundy[7]: " + ds + "<br>";
+        document.getElementById("SET").innerHTML += "Zmieniona liczba milisekund: " + dMi + "<br>";
+        document.getElementById("SET").innerHTML += "Liczba milisekund od początku ery unixowej: " + dt + "<br><br>";
+
+
+        /*********************************************/
+
+
+            document.getElementById("zad1").innerHTML = "ĆWICZENIE 1:<br>";
+        
+            var d1 = new Date();
+
+            let rok = d1.getFullYear();
+            let msc = d1.getMonth() + 1;
+            let dzien = d1.getDate();
+            let h = d1.getHours();
+            let min = d1.getMinutes();
+            let sek = d1.getSeconds();
+
+            if (msc < 10)
+                msc = "0" + msc;
+            if (dzien < 10)
+                dzien = "0" + dzien;
+            if (h < 10)
+                h = "0" + h;
+            if (min < 10)
+                min = "0" + min;
+            if (sek < 10)
+                sek = "0" + sek;
+
+            document.getElementById("zad1").innerHTML += rok + "-" + msc + "-" + dzien + " " + h + ":" + min + ":" +
+            sek;
+
+
+
+        /*********************************************/
+
+        var d2 = new Date();
+        let rok1 = d2.getFullYear();
+        let msc1 = d2.getMonth() + 1;
+        let dzien1 = d2.getDate();
+
+        document.getElementById("data").innerHTML += `${dzien1}\\${msc1}\\${rok1}`;
+
+        function Dodaj() {
+            let x = 7;
+            let t = 0;
+
+            dzien1 += x;
+            if (rok1 % 4 == 0 && msc1 == 2) {
+                if (dzien1 > 29) {
+                    t = dzien1 - 29;
+                    dzien1 = t;
+                    msc1 = 3;
+                    document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+                }
+            } else {
+                if (msc1 == 1 || msc1 == 3 || msc1 == 5 || msc1 == 7 || msc1 == 8 || msc1 == 10) {
+                    if (dzien1 > 31) {
+                        t = dzien1 - 31;
+                        dzien1 = t;
+                        msc1 += 1;
+                        document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+                    }
+                } else if (msc1 == 12) {
+                    if (dzien1 > 31) {
+                        t = dzien1 - 31;
+                        dzien1 = t;
+                        msc1 = 1;
+                        rok1 += 1;
+                        document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+                    }
+                } else if (msc1 == 4 || msc1 == 6 || msc1 == 9 || msc1 == 11) {
+                    if (dzien1 > 30) {
+                        t = dzien1 - 30;
+                        dzien1 = t;
+                        msc1 += 1;
+                        document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+                    }
+                } else if (msc1 == 2) {
+                    if (dzien1 > 28) {
+                        t = dzien1 - 28;
+                        dzien1 = t;
+                        msc1 += 1;
+                        document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+                    }
+                }
+            }
+
+            document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+
+        }
+
+        function Odejmij() {
+            let x = 1;
+
+            msc1 -= x;
+
+            if (msc1 < 1) {
+                msc1 = 12;
+                rok1 -= 1;
+            }
+
+            document.getElementById("data").innerHTML = `${dzien1}\\${msc1}\\${rok1}`;
+        }
+
+        /***********************************************/
+
+        var d3 = new Date();
+
+        let tab1 = ["NIEDZIELA", "PONIEDZIAŁEK", "WTOREK", "ŚRODA", "CZWARTEK", "PIĄTEK", "SOBOTA"];
+        let tab2 = ["STYCZEŃ", "LUTY", "MARZEC", "KWIECIEŃ", "MAJ", "CZERWIEC", "LIPIEC", "SIERPIEŃ", "WRZESIEŃ",
+            "PAŹDZIERNIK", "LISTOPAD", "GRUDZIEŃ"
+        ];
+
+        let d_tyg = d3.getDay();
+        let msc2 = d3.getMonth();
+
+        let Data = d3.toString();
+        let d_tyg1 = Data.slice(0, 3);
+        let msc3 = Data.slice(4, 7);
+        let dzien3 = parseInt(Data.slice(8, 10));
+        let rok3 = parseInt(Data.slice(11, 15));
+
+        let i;
+        for (i = 0; i < tab1.length; i++) {
+            if (d_tyg == i)
+                d_tyg1 = tab1[i];
+        }
+
+        let j;
+        for (j = 0; j < tab2.length; j++) {
+            if (msc2 == j)
+                msc3 = tab2[j];
+        }
+
+
+        document.getElementById("rok").innerHTML = rok3;
+        document.getElementById("msc").innerHTML = msc3;
+        document.getElementById("dzien").innerHTML = dzien3;
+        document.getElementById("tyg").innerHTML = d_tyg1;
+
+        if (d_tyg == 0)
+            document.getElementById("dzien").style.color = "red";
+
+
+        // console.log(d_tyg1);
+        // console.log(msc3);
+        // console.log(dzien3);
+        // console.log(rok3);
+    </script>
+
+</body>
+
+</html>

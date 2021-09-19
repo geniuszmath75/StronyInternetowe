@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>13.05</title>
+        
+        <meta charset="UTF-8">
+
+        <style>
+
+            * {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+            }
+
+            #zad1{
+                width: 60%;
+                height: auto;
+                background-color: rgb(174, 0, 255);
+
+            }
+
+            #zad2 {
+                width: 60%;
+                height: auto;
+                background-color: rgb(255, 174, 0);
+            }
+
+            #zad3 {
+                width: 60%;
+                height: auto;
+                background-color: rgb(0, 132, 255);
+            }
+
+            #zad4 {
+                width: 60%;
+                height: auto;
+                background-color: rgb(255, 0, 76);
+            }
+
+            #zad5 {
+                width: 60%;
+                height: auto;
+                background-color: rgb(98, 0, 255);
+            }
+
+            td {
+                padding: 5px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            table, td {
+                border: 3px solid red;
+            }
+
+            .tytul {
+                color: rgb(0, 255, 76);
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="metody"></div>
+        <div id="zad1">
+            <span class="tytul">Ćwiczenie 1:</span><br>
+        </div>
+        <div id="zad2">
+            <span class="tytul">Ćwiczenie 2:</span><br>
+        </div>
+        <div id="zad3">
+            <span class="tytul">Ćwiczenie 3:</span><br>
+            <button onclick="sortuj()">Posortuj liczby</button><br>
+        </div>
+        <div id="zad4">
+            <span class="tytul">Ćwiczenie 4:</span><br>
+            <button onclick="sortuj2()">Posortuj tablicę</button><br>
+        </div>
+        <div id="zad5">
+            <span class="tytul">Ćwiczenie 5:</span><br>
+            <button onclick="losuj()" >Pokaż tabelkę</button>
+        </div>
+
+        <script>
+
+            document.getElementById("metody").innerHTML = "length - zwraca długość tablicy<br>";
+            document.getElementById("metody").innerHTML += "concat() - łączy dwie lub więcej tablic w jedną<br>";
+            document.getElementById("metody").innerHTML += "indexOf() - zwraca pozycję elementu w tablicy<br>";
+            document.getElementById("metody").innerHTML += "join() - łączy elementy tablicy w Stringa<br>";
+            document.getElementById("metody").innerHTML += "lastIndexOf() - zwraca pozycję ostatniego wystąpienia szukanego elementu<br>";
+            document.getElementById("metody").innerHTML += "reverse() - odwrotne sortowanie tablicy<br>";
+            document.getElementById("metody").innerHTML += "slice() - wybiera część tablicy i zapisuje jako nową tablicę<br>";
+            document.getElementById("metody").innerHTML += "sort() - sortowanie tablicy<br>";
+            document.getElementById("metody").innerHTML += "splice() - dodaje/usuwa elementy z tablicy<br>";
+            document.getElementById("metody").innerHTML += "toString() - konwertuje tablicę na Stringa<br>";
+            document.getElementById("metody").innerHTML += "pop() - zwraca ostatni element i kasuje go z tablicy<br>";
+            document.getElementById("metody").innerHTML += "push() - dodaje element na końcu tablicy i zwraca nową długość tablicy<br>";
+            document.getElementById("metody").innerHTML += "shift() - zwraca pierwszy element i kasuje go<br>";
+            document.getElementById("metody").innerHTML += "unshift() - dodaje nowy element na początku tablicy i zwraca nową długość tablicy<br><br>";
+
+            /*********************************************************/
+
+            Imiona = ['Anna','Adam','Piotr','Ewa','Paweł','Marcin','Ela'];
+            let i = Imiona.length-1;
+
+            while(i >= 0)
+            {
+                document.getElementById("zad1").innerHTML += Imiona[i]+"<br>";
+                i--;
+            }
+            document.getElementById("zad1").innerHTML += "<br>";
+
+            /*********************************************/
+
+            let tab = [];
+
+            tab[0] = ["Anna", "Nowak", 16, "informatyk"];
+            tab[1] = ["Adam", "Kowal", 18];
+            tab[2] = ["Piotr", "Ogórek", 17];
+            tab[3] = ["Ewa", "Lisowska", 20, "kierowca"];
+
+            for(let i = 0; i < tab.length; i++)
+            {
+                for(let j = 0; j < tab.length; j++)
+                {
+                    if(tab[i][j] == undefined)
+                        tab[i][j] = "";
+                        
+                    document.getElementById("zad2").innerHTML += tab[i][j]+" ";
+                } 
+                document.getElementById("zad2").innerHTML += "<br>";
+            }
+            document.getElementById("zad2").innerHTML += "<br>";
+            // console.log(tab[0]);
+
+            /*********************************************/
+            var tab1 = [5,4,8,21,15,21,100,43];
+            document.getElementById("zad3").innerHTML += "<br>Nieposortowane liczby:"+"<br>";
+            document.getElementById("zad3").innerHTML += tab1+"<br><br>";
+
+            function sortuj() {
+                tab1.sort((a,b) => a - b);
+                document.getElementById("zad3").innerHTML += "Posortowane liczby:"+"<br>"+tab1;
+            }
+            /***********************************************/
+
+            let tab2 = ["Alan",25,"Trawa",2,"Ola",15,"Ognisko",56,"Jabłko",100];
+
+            document.getElementById("zad4").innerHTML += tab2+"<br><br>";
+
+            function sortuj2() {
+                let alf = [];
+                let num = [];
+
+                for(let i = 0; i < tab2.length; i++)
+                {
+                    if(isNaN(tab2[i]) != true)
+                    {
+                        num[i] = parseInt(tab2.slice(i,i+1));
+                    }
+                    else
+                    {
+                        alf[i] = (tab2.slice(i,i+1)).toString();
+                    }
+
+                }
+            
+
+                alf.sort();
+                num.sort((a,b) => a - b);
+
+                document.getElementById("zad4").innerHTML += "Posortowane słowa: "+alf +"<br>";
+
+                document.getElementById("zad4").innerHTML += "Posortowane liczby: "+num+"<br>";
+            }
+                // console.log(alf);
+                // console.log(num);
+
+                /**************************************************/
+                var tab3 = [];
+                
+                function losuj() {
+                    let x = setInterval(tabelka,3000);
+                }
+
+                function tabelka() {     
+                    for(let i = 0;i < 9; i++)
+                    {
+                        tab3[i] = Math.floor(Math.random()*100);
+                    }           
+                    // console.log(tab3);
+
+                    let element = document.getElementById("zad5");
+                    let tabela = document.createElement("table");
+                    let tblBody = document.createElement("tbody");
+
+                    for(let i = 0;i < 3;i++)
+                    {
+                        let row = document.createElement("tr");
+                        for(let j = 0;j < 3;j++)
+                        {
+
+                            let cell = document.createElement("td");
+                            let cellDate;
+                            if(i == 1)
+                            {
+                                cellDate = document.createTextNode(tab3[j+3]);
+
+                            }else if(i == 2)
+                            {
+                                cellDate = document.createTextNode(tab3[j+6]);
+
+                            }else
+                            {
+                                cellDate = document.createTextNode(tab3[j]);
+
+                            }
+                            cell.appendChild(cellDate);
+                            row.appendChild(cell)
+                        }
+                        tblBody.appendChild(row);
+                    }
+                    
+                    tabela.appendChild(tblBody);
+                    element.appendChild(tabela);
+                }
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>06.09</title>
+        <script src="06.09.js"></script>
+
+        <style>
+
+            * {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .tlo {
+                width: 60%;
+                height: auto;
+                background-color: #EDC;
+            }
+
+            .tlo2 {
+                width: 60%;
+                height: auto;
+                background-color: #CDE;
+            }
+
+            .tytul {
+                color: #987;
+            }
+
+            #imie, #nazwisko, #data {
+                border: 2px solid gold;
+                margin: 3px;
+                padding: 13px;
+                background-color: #eee;
+                font-weight: bold;
+            }
+
+            #data2 {
+                border: 2px solid black;
+                margin: 3px;
+                padding: 13px;
+                background-color: #dee;
+                font-weight: bold;
+            }
+
+            #tekst, #text {
+                display: none;
+                color: red;
+                font-weight: bold;
+                font-size: 13px;
+                margin: 3px;
+            }
+
+            #tekst2, #text2 {
+                display: none;
+                color: rgb(28, 201, 28);
+                font-weight: bold;
+                font-size: 13px;
+                margin: 3px;
+            }
+
+        </style>
+    </head>
+    <!-- <body onload="checkCookie()"> -->
+    <body>
+
+        <div class="tlo">
+            <div class="tytul">
+                    <h2>Ćwiczenie 1:</h2>
+                    <input type="text" id="imie" placeholder="Wpisz imię..." size="21"><br>
+                    <input type="text" id="nazwisko" placeholder="Wpisz nazwisko..." size="21">
+                    <button onclick="waliduj()">Waliduj</button><br>
+                    <input type="text" id="data" placeholder="Podaj datę... DD-MM-RRRR" size="21">
+                <div id="tekst">Niektóre pola są źle wypełnione!</div>
+                <div id="tekst2">Wszystkie pola wypełniono poprawnie!</div>
+            </div>
+        </div>
+
+        <div class="tlo2">
+            <div>
+                <div class="tytul">
+                    <h2>Ćwiczenie 2:</h2>
+                    <input onkeyup="waliduj2()" type="text" id="data2" placeholder="DD-MM-RRRR">
+                    <div id="text">Niepoprawny format daty</div>
+                    <div id="text2">Wszystko jest OK</div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

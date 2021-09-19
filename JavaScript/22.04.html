@@ -1,0 +1,156 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>22.04</title>
+
+    <style>
+        body{
+            font-family: Verdana;
+        }
+        .zad {
+            width: 100%;
+            height: 100px;
+            background-color: #ac0606;
+            color: white;
+            border: 1px solid #000;
+        }
+        .tresc {
+            color: rgb(72, 72, 240);
+        }
+        #wynik {
+            height: 35px;
+            width: 300px;
+            border: 1px solid #000;
+            margin: 0;
+            background-color: rgb(187, 92, 92);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="tresc">
+
+        <h2>Metody string</h2><br>
+        - trim() – kasuje białe spacje<br>
+        - toUpperCase() – duże litery<br>
+        - toLowerCase() – małe litery<br>
+        - toString() – zamiana na String / system liczbowy<br>
+        - substring() – wycinanie znaków ze Stringa<br>
+        - substr() – wycinanie znaków ze Stringa<br>
+        - slice() – wycięcie części Stringa<br>
+        - split() – cięcie Stringa i zapis każdego elementu do tablicy np. [ala, ma, kota];<br>
+        - search() – zwraca miejsce szukanego ciągu znaków<br>
+        - replace() – zamienia jeden ciąg znaków na drugi<br>
+        - indexOf(), lastIndexOf() – miejsce pierwszego / ostatniego wystąpienia ciągu znaków<br>
+        - fromCharCode() – zamiana liczby Unicode na znak<br>
+        - charCodeAt() – zmiana znaku na liczbę Unicode<br>
+        - concat() – łączenie dwóch lub więcej Stringów<br>
+        - charAt() – zwraca znak Stringa z podanej pozycji<br>
+
+    </div>
+
+    <h3>Ćwiczenie 1:</h3>
+
+    <div class="zad">
+
+        Rozwiązanie:<br><br>
+        <div id="wynik"></div>
+        <button onclick="Podaj()">Podaj dane</button>
+
+    </div>
+
+    <h3>Ćwiczenie 2:</h3>
+
+    <div class="zad">
+
+        Rozwiązanie:<br><br>
+        <button onclick="Szyfrowanie()">SZYFROWANIE</button><br>
+        <button onclick="Deszyfrowanie()">DESZYFROWANIE</button>
+        <input type="text" height="60px" width="200px" id="wynik2"></input>
+        <button onclick="SZ()">SZ</button>
+
+    </div>
+
+    <script>
+
+        function Podaj() {
+            let dane = prompt("Podaj imię i nazwisko:", "DaMIaN JUDka");
+            let wyrazy = dane.split(' ');
+            let imie = wyrazy[0];
+            let nazwisko = wyrazy[1];
+
+            console.log(imie);
+            console.log(nazwisko);
+           
+            imie1 = (imie.slice(1)).toLowerCase();
+            imie2 = (imie.slice(0,1)).toUpperCase();
+            imie = imie2.concat(imie1);
+
+            nazwisko1 = (nazwisko.slice(1)).toLowerCase();
+            nazwisko2 = (nazwisko.slice(0,1)).toUpperCase();
+            nazwisko = nazwisko2.concat(nazwisko1);
+            
+            let wynik = imie + " " + nazwisko;
+            document.getElementById("wynik").innerHTML = wynik;
+            console.log(wynik);
+        }
+
+        function Szyfrowanie() {
+            let dane = prompt("Podaj dane do szyfrowania:", "abcd123");
+            let szyfr1 = dane.split('');
+
+            // console.log(dane);
+            // console.log(szyfr1);
+
+            let szyfr = " ";
+
+            for(let i = 0;i < szyfr1.length;i++)
+            {
+                szyfr += szyfr1[i].charCodeAt();
+                szyfr = szyfr.concat(",");
+            }
+            prompt("Zaszyfrowane dane:", szyfr);
+            // console.log(szyfr);
+        }
+
+        function Deszyfrowanie() {
+            let dane = document.getElementById("wynik2").value;
+            let szyfr1 = (dane.toString()).split(' ');
+
+            let szyfr = "";
+
+            console.log(dane);
+            console.log(szyfr1);
+
+
+            for(let i = 0;i < szyfr1.length;i++)
+            {
+                szyfr += String.fromCharCode(szyfr1[i]);
+            }
+            document.getElementById("wynik2").value = szyfr;
+            console.log(szyfr);
+        }
+
+        function SZ() {
+            let tekst = document.getElementById("wynik2").value;
+            let sz1 = tekst.split('');
+
+            let sz = " ";
+
+            for(let i = 0;i < sz1.length;i++)
+            {
+                sz += sz1[i].charCodeAt();
+                sz = sz.concat(" ");
+            }
+            document.getElementById("wynik2").value = sz;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>11.03</title>
+
+</head>
+
+<body>
+
+    <script>
+        function zmienKolor() {
+
+            let kolor = Math.floor(Math.random() * 256);
+            let kolor1 = Math.floor(Math.random() * 256);
+            let kolor2 = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = "rgb("+kolor+","+kolor1+","+kolor2+")";
+            console.log(kolor);
+            console.log(kolor1);
+            console.log(kolor2);
+
+
+        }
+
+        /********************************/
+
+        function otworz() {
+            okno = window.open("https://www.youtube.com", "", "width=300, height=300");
+        }
+
+        function zamknij() {
+            window.okno.close();
+        }
+
+        function zmienRozm() {
+            window.okno = resizeBy(300, 300);
+
+        }
+
+        function zmienRozm2() {
+            window.okno = resizeTo(300, 300);
+        }
+
+        function przesunDo() {
+            window.okno = moveTo(500, 100);
+        }
+
+        function przesunNa() {
+            window.okno = moveBy(600, 600);
+        }
+
+        /*let interwal = setInterval(timer, 3000);
+
+        function timer() {
+            let d = alert("Cześć");
+
+        }
+        function stopTimer() {
+            clearInterval(interwal);
+        }
+        */
+        //setTimeout(function(){alert("Cześć"); }, 4000);
+
+        /**************************/
+
+        function timer() {
+            let czas = setInterval(okienka, 5000);
+        }
+
+        function stopOkienka() { clearInterval(czas); }
+
+        let w = screen.availWidth;
+        let h = screen.availHeight;
+        let nr = 1;
+
+        function okienka() {
+            
+            let okienko = window.open("", "_blank", `height = ${h} width = ${w}`);
+
+            let kol = Math.floor(Math.random() * 256);
+            let kol1 = Math.floor(Math.random() * 256);
+            let kol2 = Math.floor(Math.random() * 256);
+
+            okienko.document.body.style.backgroundColor = "rgb("+kol+","+kol1+","+kol2+")";
+            console.log(kol);
+            console.log(kol1);
+            console.log(kol2);
+
+            okienko.document.write("Wymiary:"+w+"x"+h+"<br>"+"Okno nr"+nr);
+            w-=30;
+            h-=20;
+            nr++;
+
+        }
+    </script>
+
+    <button onclick="zmienKolor()">Zmień kolor</button>
+
+    <button onclick="otworz()">Nowe okno</button>
+    <button onclick="zamknij()">Zamknij okno</button>
+    <button onclick="zmienRozm()">Zmien rozmiar na 300x300</button>
+    <button onclick="zmienRozm2()">Zmien rozmiar na 250x250 </button>
+    <button onclick="przesunDo()">Przesun na pozycje 500x100</button>
+    <button onclick="przesunNa()">Przesun na pozycje 600x600</button>
+    <button onclick="stopTimer()">clearInterwał</button>
+    <button onclick="timer()">Okienka</button>
+    <button onclick="stopOkienka()">Zatrzymaj pop-up</button>
+
+
+</body>
+
+</html>

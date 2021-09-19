@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>25.03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <script>
+        document.write("Nazwa:" + navigator.appName + "<br>");
+        document.write("Platforma:" + navigator.platform + "<br>");
+        document.write("Wersja:" + navigator.appVersion + "<br>");
+        document.write("Wersja:" + navigator.userAgent + "<br>");
+        document.write("Wersja:" + parseInt(navigator.appVersion) + "<br>");
+        document.write("Wersja:" + navigator.product + "<br>");
+        document.write("Ciasteczka:" + navigator.cookieEnabled + "<br>");
+        document.write("Język:" + navigator.language + "<br>");
+        document.write("Włączona Java:" + navigator.javaEnabled + "<br>");
+        document.write("Tryb offline/online:" + navigator.onLine + "<br>");
+
+        document.write("<br><br>")
+
+        /*****************************************************/
+
+        //   document.write("Długość historii: "+history.length+"<br>");
+        //   window.history.back();
+        //   window.history.forward();
+        //   window.history.go(-2);
+
+        //zmiana aktualnego URL
+        //   document.write(document.location.href+"<br>");
+
+        function skrypt() {
+            let x = prompt("Podaj liczbę całkowitą: ", "Długość historii: " + history.length);
+
+            console.log(typeof x);
+
+            if (isNaN(x) == true && history.length < x && x < 0)
+                window.history.go(-x);
+            else
+                alert("Zła wartość");
+        }
+
+        /**************************************/
+
+        // location.assign("https://www.w3schools.com/");
+        document.write(location.href + "<br>");
+        document.write(location.protocol + "<br>");
+        document.write(location.hostname + "<br>");
+        document.write(location.pathname + "<br>");
+        document.write(location.port + "<br>");
+        document.write(location.search + "<br><br>");
+
+        /*let x = location.pathname;
+        let y = x.lastIndexOf("/")+1;
+        let z = y.substr(x);
+        document.write(z);*/
+
+        function kalkulator() {
+            let a;
+            let b;
+            let x;
+            let wynik;
+            let wybor  = ["Dodaj", "Odejmij"];
+
+            for(x of wybor)
+            {
+                switch(dzialanie)
+                {
+                    case 1:
+                        wynik = a + b;
+                        document.getElementById("wynik").innerHTML = wynik;
+                        break;
+                    case 2:
+                        wynik = a - b;
+                        document.getElementById("wynik").innerHTML = wynik;
+                        break;
+                    default:
+                        alert("Nie podałeś żadnej lub tylko jedną zmienną!");
+                }
+            }
+
+        }
+    </script>
+
+    <button onclick="skrypt()">Cofnij</button>
+    <div id="plik1"></div>
+    <br><br>
+
+    <form>
+        <input type="number" name="a"></input>
+        <input type="number" name="b"></input>
+        <select id="select">
+            <option id="plus">Dodaj</option>
+            <option id="minus">Odejmij</option>
+        </select>
+        <br> <br>
+        <textarea id="wynik"></textarea>
+        <button onclick="kalkulator()">Oblicz</button>
+    </form>
+
+
+</body>
+
+</html>
