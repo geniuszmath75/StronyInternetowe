@@ -1,1 +1,1 @@
-# StrontInternetowe
+# StronyInternetowe
