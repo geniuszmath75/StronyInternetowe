@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+     <head>
+
+     	<meta http-equiv="refresh" content="10">
+     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title></title>
+
+	<style type="text/css">
+
+		.a {
+			border: 5px solid green;
+			float: left;
+		}
+
+		.b {
+			border: 5px solid red;
+			float: left;
+		}
+
+		.c {
+			border: 5px solid orange;
+			float: left;
+		}
+
+		.klik {
+			border: 5px solid green;
+		}
+		
+	</style>
+     
+     </head>
+     
+     <body>
+
+     	      <div class="a">
+
+     	      	<h2>Obiekty w JS: </h2>
+
+     	      	<p id="składnia">
+
+     	      		<h4>
+     	      			Składnia:
+     	      		</h4>
+
+     	      		<pre>
+var osoby = {
+     	imie:"Adam",
+     	nazwisko:"Nowak",
+     	wiek:"30",
+     	PESEL:12359268749,
+     	imieNazwisko: function() {
+     	      return this.imie + " " + this.nazwisko;
+     	}
+};
+document.getElementById("osoba").innerHTML = osoby.imieNazwisko()
++ " ma"+ osoby.wiek + " lat."
+ + " Jego PESEL to: " + osoby.PESEL + ".";
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>
+     	      		Wynik:
+     	      	</h4>
+
+     	      	<p id="osoba"></p>
+
+     	      	<script type="text/javascript">
+
+     	      		var osoby = {
+     	      			imie:"Adam",
+     	      		      nazwisko:"Nowak",
+     	      		      wiek:"30",
+     	      		      PESEL:12359268749,
+     	      		      imieNazwisko: function() {
+     	      		      	return this.imie + " " + this.nazwisko;
+     	      		      }
+     	      		};
+     	      		document.getElementById("osoba").innerHTML = osoby.imieNazwisko() + " ma " + osoby.wiek + " lat." + "<br>" + " Jego PESEL to: " + osoby.PESEL + ".";
+     	      		
+     	      	</script>
+     	      	
+     	      </div>
+
+     	      <div class="b">
+
+     	      	<h2>
+     	      		Zdarzenia:
+     	      	</h2>
+
+     	      	<p>Kliknij, żeby wyświetlić datę:</p>
+
+     	      	<button onclick="this.innerHTML = Date()">Aktualna data</button>
+
+     	      	<p>Najedź myszką w obręb zielonej ramki: </p>
+
+     	      	<div class="klik" onmouseover="this.style.backgroundColor='yellow'">Klik</div>
+     	      	
+     	      </div>
+
+     	      <div class="c">
+
+     	      	<h2>Stringi: </h2>
+                  
+                  <h3>1. Długość stringu: </h3>
+
+                  <h4>Składnia: </h4>
+
+                  <p>
+
+                  	<pre>
+var txt = "ABCDEFGHIJKLMNOPRSTUWXYZ";
+document.getElementById("string").innerHTML = txt.length;
+                  	</pre>
+                  	
+                  </p>
+
+                  <h4>Wynik: </h4>
+
+     	      	<p id="string"></p>
+
+     	      	<h3>2. Pozycja stringu w stringu: </h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+     	      		<pre>
+var str = "Znajdź położenie słowa 'położenie'";
+var zn = str.indexOf("położenie");
+document.getElementById("string2").innerHTML = zn;		
+     	      		</pre>
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<p id="string2"></p>
+
+     	      	<h3>3. Wyciąganie części stringu: </h3>
+
+     	      	<h4>a) slice()</h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<span>Może przyjmować wartości ujemne.</span>
+
+     	      		<pre>
+var str = "Jabłko, Banan, Cytryna";
+var res = str.slice(8, 13);
+document.getElementById("string3").innerHTML = res;
+     	      		</pre>
+
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<p id="string3"></p>
+
+     	      	<h4>b) substring()</h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+     	      		Taka sama jak w slice() z tą różnicą, że substring() nie może przyjmowac wartości ujemnych, np. -12.
+     	      	</p>
+
+     	      	<h4>c) substr()</h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+     	      	      Taka sama jak w slice() z tą różnicą, że w substr() drugi parametr oznacza długość wycinanego fragmentu.<br>
+     	      	      Może przyjmować wartości ujemne.
+     	            </p>
+
+     	            <h3>4. Zamiana stringu: </h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+function zmianaString() {
+      var str = document.getElementById("string4").innerHTML;
+      var txt = str.replace("Apple", "Microsoft");
+      document.getElementById("string4").innerHTML = txt;
+};
+
+     	      		</pre>
+
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<button onclick="zmianaString()">Popraw</button>
+
+     	      	<p id="string4">Twórcą systemu Windows jest Apple.</p>
+
+     	      	<h3>5. Zmiana na duże/małe litery: </h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+
+var tekst1 = "Cześć wszystkim!";    // String
+var tekst2 = tekst1.toUpperCase();  // tekst2 = tekst1 + duże litery 
+
+var tekst1 = "Cześć wszystkim!";    // String
+var tekst2 = tekst1.toLowerCase();  // tekst2 = tekst1 + małe litery    	      			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<p>
+     	      		<span>CZEŚĆ WSZYSTKIM!</span><br>
+     	      		<span>cześć wszystkim!</span>
+     	      	</p>
+
+     	      	<h3>6. Sklejanie stringów: </h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+var tekst1 = "Cześć";
+var tekst2 = "Wszystkim";
+var tekst3 = tekst1.concat(" ", tekst2);
+document.getElementById("sklejanie").innerHTML = tekst3;			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<p id="sklejanie"></p>
+
+     	      	<h3>7. Usuwanie spacji w stringu</h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+function bezSpacji() {
+     	var str = "      Cześć wszystkim!";
+     	document.getElementById("bezSpacji").innerHTML = str.trim();
+}     	      			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h3>8. Wyciąganie znaków ze stringa: </h3>
+
+     	      	<h4>a) charAt(): </h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+var str = "Cześć wszystkim!";
+str.charAt(0);    // zwróci 'C' 	      			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>b) charCodeAt(): </h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+var str = "Cześć wszystkim!";
+str.charCodeAt(0); // zwróci 67 (wartość 'C' w UTF-16 )  	      			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>c) property access: </h4>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+var str = "Cześć wszystkim!";
+str[0];  	      			
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h3>9. Konwersja stringa na tablicę: </h3>
+
+     	      	<h4>Składnia: </h4>
+
+     	      	<p>
+
+     	      		<pre>
+var str = "a,b,c,d,e,f";
+var arr = str.split("");
+document.getElementById("demo").innerHTML = arr[0];
+     	      		</pre>
+     	      		
+     	      	</p>
+
+     	      	<h4>Wynik: </h4>
+
+     	      	<p>a</p>
+                  
+     	      </div>
+
+     	      	<script type="text/javascript">
+
+     	      		var txt = "ABCDEFGHIJKLMNOPRSTUWXYZ";
+     	      		document.getElementById("string").innerHTML = txt.length;
+     	      		
+     	      	</script>
+
+     	      	<script type="text/javascript">
+
+     	      		var str = "Znajdź położenie słowa 'położenie'";
+     	      		var zn = str.lastIndexOf("położenie", 16);
+     	      		document.getElementById("string2").innerHTML = zn;
+     	      		
+     	      	</script>
+
+     	      	<script type="text/javascript">
+
+     	      		var str = "Jabłko, Banan, Cytryna";
+     	      		var res = str.slice(8, 13);
+     	      		document.getElementById("string3").innerHTML = res;
+     	      		
+     	      	</script>
+
+     	      	<script type="text/javascript">
+
+     	      		function zmianaString() {
+     	      			var str = document.getElementById("string4").innerHTML;
+     	      		      var txt = str.replace("Apple", "Microsoft");
+     	      		      document.getElementById("string4").innerHTML = txt;
+     	      		};
+     	      		
+     	      	</script>
+
+     	      	<script type="text/javascript">
+
+     	      		var tekst1 = "Cześć";
+     	      		var tekst2 = "wszystkim !";
+     	      		var tekst3 = tekst1.concat(" ", tekst2);
+     	      		document.getElementById("sklejanie").innerHTML = tekst3; 
+     	      		
+     	      	</script>
+
+     	      	<script type="text/javascript">
+
+     	      			var tekst1 = "      Cześć wszystkim!";
+     	      			document.getElementById("bezSpacji").innerHTML = tekst1.trim();		
+     	      		
+     	      	</script>   
+
+     	      	<script type="text/javascript">
+
+     	      		
+     	      		
+     	      	</script>	      
+
+     </body>
+
+</html>

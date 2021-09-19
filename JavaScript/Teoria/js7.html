@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   	   <meta http-equiv="refresh" content="30">
+   	   <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+
+	   <title></title>
+
+	   <style type="text/css">
+
+	   	   .a {
+	   	   	   border: 5px solid red;
+	   	   	   float: left;
+	   	   }
+
+	   	   .b {
+	   	   	   border: 5px solid green;
+	   	   	   float: left;
+	   	   }
+
+	   	   .c {
+	   	   	   border: 5px solid yellow;
+	   	   	   float: left;
+	   	   }
+
+	   	   .true {
+	   	   	   color: green;
+	   	   }
+
+	   	   .false {
+	   	   	   color: red;
+	   	   }
+	   	
+	   </style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Matematyka:</h2>
+
+   	   	   <h3>1. Math.round(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+a) document.getElementById("round").innerHTML = "a) " + Math.round(4.4);
+
+b) document.getElementById("round1").innerHTML = "b) " + Math.round(4.7);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="round">
+      	   	
+      	   </p>
+
+      	   <p id="round1">
+      	   	
+      	   </p>
+
+      	   <h3>2. Math.pow(x, y): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("pow").innerHTML = Math.pow(8, 2);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="pow">
+      	   	
+      	   </p>
+
+      	   <h3>3. Math.sqrt(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("sqrt").innerHTML = Math.sqrt(64);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sqrt">
+      	   	
+      	   </p>
+
+      	   <h3>4. Math.abs(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("abs").innerHTML = Math.abs(-4.7);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="abs">
+      	   	
+      	   </p>
+
+      	   <h3>5. Math.ceil(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("ceil").innerHTML = Math.ceil(4.4);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="ceil">
+      	   	
+      	   </p>
+
+      	   <h3>6. Math.floor(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("floor").innerHTML = Math.floor(4.7);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="floor">
+      	   	
+      	   </p>
+
+      	   <h3>7. Math.sin(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("sin").innerHTML = "Sinus 90 stopni jest równy " + Math.sin(90 * Math.PI / 180);
+               </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sin">
+      	   	
+      	   </p>
+
+      	   <h3>8. Math.cos(x): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("cos").innerHTML = "Cosinus 0 stopni jest równy " + Math.cos(0 * Math.PI / 180);
+               </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="cos">
+      	   	
+      	   </p>
+
+      	   <h3>9. Wartość minimalna i maksymalna: </h3>
+
+      	   <h4>a) Math.min(): </h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("min").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+               </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="min">
+      	   	
+      	   </p>
+
+      	   <h4>b) Math.max(): </h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("max").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+               </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="max">
+      	   	
+      	   </p>
+
+       </div>
+
+       <div class="b">
+
+       	   <h2>Losowanie liczby z danego przedziału: </h2>
+
+       	   <h3>1. Math.random(): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+a) document.getElementById("random").innerHTML = "Zwraca liczbę z zakresu <0,1): " + Math.random();
+
+b) document.getElementById("random1").innerHTML = "b) Zwraca liczbę z zakresu <0,10>: " + Math.floor(Math.random() * 11);
+
+c) document.getElementById("random2").innerHTML = "c) Zwraca liczbę z zakresu <1,10>: " + (Math.floor(Math.random() * 10) + 1);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="random">
+      	   	
+      	   </p>
+
+      	   <p id="random1">
+      	   	
+      	   </p>
+
+      	   <p id="random2">
+      	   	
+      	   </p>
+
+      	   <h3>2. Funkcja losowa: </h3>
+
+      	   <h4>a) bez 'maxLiczba' włącznie: </h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Losowanie(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <button onclick="document.getElementById('frandom').innerHTML = Losowanie(0, 10)">Losuj</button>
+
+      	   <p id="frandom">
+      	   	
+      	   </p>
+
+      	   <h4>b) 'maxLiczba' włącznie: </h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Losowanie(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <button onclick="document.getElementById('frandom1').innerHTML = Losowanie(1, 10)">Losuj</button>
+
+      	   <p id="frandom1">
+      	   	
+      	   </p>
+       	
+       </div>
+
+       <div class="c">
+
+       	   <h2>Wartości logiczne (Boolean): </h2>
+
+       	   <h3>1. Funkcja Boolean(): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function PrawdaFałsz() {
+    document.getElementById("boolean").innerHTML = Boolean(10 > 9);
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p>Wyrażenie '10 > 9' jest: </p>
+
+      	   <button onclick="PrawdaFałsz()">Sprawdź!</button>
+
+      	   <p id="boolean">
+      	   	
+      	   </p>
+
+      	   <h3>2. Wartość <span class="true">true</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var b1 = Boolean(100);
+var b2 = Boolean(3.14);
+var b3 = Boolean(-15);
+var b4 = Boolean("Cześć");
+var b5 = Boolean('false');
+var b6 = Boolean(1 + 7 + 3.14);
+
+document.getElementById("true").innerHTML = "100 jest " + b1 + "<br>" + "3.14 jest " + b2 + "<br>" + "-15 jest " + b3 + "<br>" + "Każdy (niepusty) string jest " + b4 + "<br>" + "Nawet string 'false' jest " + b5 + "<br>" + "Każde wyrażenie (z wyjątkiem zero) jest " + b6;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="true">
+      	   	
+      	   </p>
+
+      	   <h3>3. Wartość <span class="false">false</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var b1 = Boolean(0);
+var b2 = Boolean(-0);
+var b3 = Boolean("");
+var b4 = Boolean();
+var b5 = Boolean(null);
+var b6 = Boolean(false);
+var b7 = Boolean(10 / "H");
+
+document.getElementById("false").innerHTML = "0 jest " + b1 + "<br>" + "-0 jest " + b2 + "<br>" + " Pusty string ma wartość logiczną: " + b3 + "<br>" + "Każdy niezdefiniowana niewiadoma ma wartość logiczną: " + b4 + "<br>" + "'Null' ma wartość logiczną: " + b5 + "<br>" + "''False'' ma wartość logiczną: " + b6 + "<br>" + "Wartość logiczna 'NaN' to: " + b7;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="false">
+      	   	
+      	   </p>
+       	
+       </div>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("round").innerHTML = "a) " + Math.round(4.4);
+      	   	   document.getElementById("round1").innerHTML = "b) " + Math.round(4.7);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("pow").innerHTML = Math.pow(8, 2);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("sqrt").innerHTML = Math.sqrt(64);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("abs").innerHTML = Math.abs(-4.7);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("ceil").innerHTML = Math.ceil(4.4);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("floor").innerHTML = Math.floor(4.7);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("sin").innerHTML = "Sinus 90 stopni jest równy " + Math.sin(90 * Math.PI / 180);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("cos").innerHTML = "Cosinus 0 stopni jest równy " + Math.cos(0 * Math.PI / 180);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("min").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("max").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("random").innerHTML = "a) Zwraca liczbę z zakresu <0,1): " + Math.random();
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("random1").innerHTML = "b) Zwraca liczbę z zakresu <0,10>: " + Math.floor(Math.random() * 11);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   document.getElementById("random2").innerHTML = "c) Zwraca liczbę z zakresu <1,10>: " + (Math.floor(Math.random() * 10) + 1);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   function Losowanie(min, max) {
+      	   	   	   return Math.floor(Math.random() * (max - min + 1) ) + min;
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   function PrawdaFałsz() {
+      	   	   	   document.getElementById("boolean").innerHTML = Boolean(10 > 9);
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var b1 = Boolean(100);
+               var b2 = Boolean(3.14);
+               var b3 = Boolean(-15);
+               var b4 = Boolean("Cześć");
+               var b5 = Boolean('false');
+               var b6 = Boolean(1 + 7 + 3.14);
+
+               document.getElementById("true").innerHTML = "100 jest " + b1 + "<br>" + "3.14 jest " + b2 + "<br>" + "-15 jest " + b3 + "<br>" + "Każdy (niepusty) string jest " + b4 + "<br>" + "Nawet string 'false' jest " + b5 + "<br>" + "Każde wyrażenie (z wyjątkiem zero) jest " + b6;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var b1 = Boolean(0);
+               var b2 = Boolean(-0);
+               var b3 = Boolean("");
+               var b4 = Boolean();
+               var b5 = Boolean(null);
+               var b6 = Boolean(false);
+               var b7 = Boolean(10 / "H");
+
+               document.getElementById("false").innerHTML = "0 jest: " + b1 + "<br>" + "-0 jest: " + b2 + "<br>" + " Pusty string ma wartość logiczną: " + b3 + "<br>" + "Każdy niezdefiniowana niewiadoma ma wartość logiczną: " + b4 + "<br>" + "'Null' ma wartość logiczną: " + b5 + "<br>" + "''False'' ma wartość logiczną: " + b6 + "<br>" + "Wartość logiczna 'NaN' to: " + b7;
+      	   	
+      	   </script>
+
+   </body>
+
+</html>

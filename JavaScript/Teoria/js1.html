@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="15">
+
+
+	<title></title>
+      
+      <style type="text/css">
+      	body {
+      		float: left;
+
+      	}
+
+      	.a {
+      		border: 5px solid red;
+      		margin-bottom: 5px;
+      	}
+
+      	.b {
+                  border: 5px solid green;
+                  margin-bottom: 5px;
+      	}
+
+      	.c {
+      		border: 5px solid blue;
+      		margin-bottom: 5px;
+      	}
+
+      	.d {
+                  border: 5px solid purple;
+      		margin-bottom: 5px;
+      	}
+
+      	.e {
+      		border: 5px solid orange;
+      		margin-bottom: 5px;
+      	}
+
+      </style>
+</head>
+
+<body>
+      
+      <div class="a">
+      	
+
+
+      <h2>Zmiana zawartości HTML:</h2>
+      <p id="tekst">Cześć wszystkim!</p>
+
+      <button type="button" onclick='document.getElementById("tekst").innerHTML = "Na razie!"'>Kliknij</button>
+
+      </div>
+
+      <div class="b">
+      	
+      <h2>Użycie inner.HTML: </h2>
+
+      <p id="tekst2">5*6=</p>
+
+      <button type="button" onclick="Mnożenie()">Wynik</button>
+      
+      <script type="text/javascript">
+      	
+      function Mnożenie() {
+
+      		document.getElementById('tekst2').innerHTML = 5*6;
+      	}
+      </script>
+
+      </div>
+
+      <div class="c">
+
+      	<h2>Użycie document.write(): </h2>
+
+      	<script type="text/javascript">
+
+      		document.write(5*6);
+
+      	</script>
+      	
+
+      </div>
+
+      <div class="d">
+
+      	<h2>Użycie window.alert(): </h2>
+
+      	<pre>
+      		
+      	script type="text/javascript"
+
+      		window.alert(5*6);
+
+      	script
+      	
+      	</pre>
+
+      </div>
+
+      <div class="e">
+
+      	<h2>Użycie console log(): </h2>
+
+      	<h3>1. Wciśnij F12 <br>
+                2. Wejdź w konsolę
+      	</h3>
+
+      	<script type="text/javascript">
+
+      		console.log(5*6);
+
+      	</script>
+      	
+
+      </div>
+</body>
+
+</html>

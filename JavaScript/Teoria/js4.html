@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+
+     	<meta http-equiv="refresh" content="30">
+     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	       <title></title>
+
+	<style type="text/css">
+
+		.a {
+			border: 5px solid red;
+			float: left;
+		}
+
+		.b {
+			border: 5px solid green;
+			float: left;
+		}
+
+		.c {
+			border: 5px solid yellow;
+			float: left;
+		}
+		
+	</style>
+
+      </head>
+
+      <body>
+
+      	<div class="a">
+
+      		<h2>Liczby: </h2>
+
+      		<h3>1. Zmiana liczby na string: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+var x = 123;
+document.getElementById("wynik").innerHTML =
+x.toString();
+
+lub
+
+var x = 123;
+document.getElementById("demo").innerHTML =
+  x.valueOf();
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="wynik">
+      			
+      		</p>
+
+      		<h3>2. Zwrócenie liczby w notacji wykładniczej: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+var x = 9.656;
+document.getElementById("notacja").innerHTML =
+x.toExponential() + "<br>" +
+x.toExponential(2) + "<br>" +
+x.toExponential(4) + "<br>" +
+x.toExponential(6);
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="notacja">
+      			
+      		</p>
+
+      		<h3>3. Przybliżanie liczby: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+var x = 9.656;
+document.getElementById("demo").innerHTML =
+  x.toFixed(0) + "<br>" +
+  x.toFixed(2) + "<br>" +
+  x.toFixed(4) + "<br>" +
+  x.toFixed(6);
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="przyb">
+      			
+      		</p>
+
+      		<h3>4. Przybliżanie liczby(inny sposób): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+var x = 9.656;
+document.getElementById("demo").innerHTML =
+  x.toPrecision() + "<br>" +
+  x.toPrecision(2) + "<br>" +
+  x.toPrecision(4) + "<br>" +
+  x.toPrecision(6);
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="przyb2">
+      			
+      		</p>
+
+      		<h3>5. Konwersja zmiennych na liczby: </h3>
+
+      		<h4>a) Number(): </h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+document.getElementById("demo").innerHTML =
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("10")
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="number">
+      			
+      		</p>
+
+      		<h4>b) parseInt(): </h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+document.getElementById("demo").innerHTML =
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6");
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="number2">
+      			
+      		</p>
+
+      		<h4>c) parseFloat(): </h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+document.getElementById("demo").innerHTML =
+  parseFloat("10") + "<br>" +
+  parseFloat("10.33") + "<br>" +
+  parseFloat("10 6");
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="number3">
+      			
+      		</p>
+
+      		<h3>6. Maksymalna i minimalna wartość liczby w JS: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+var x = Number.MAX_VALUE;
+document.getElementById("demo").innerHTML = x;
+
+var y = Number.MIN_VALUE;
+document.getElementById("demo").innerHTML = y;
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:
+      		</h4>
+
+      		<p id="max">
+      			
+      		</p>
+
+      		<p id="min">
+      			
+      		</p>
+
+      	</div>
+
+      	<div class="b">
+
+            <h2>Tablice: </h2>
+
+            <h3>1. Wielkość tablicy:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("dłTab").innerHTML = Owoce.length;
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4> 
+
+            <p id="dłTab">
+            	
+            </p>
+
+            <h3>2. Dodawanie elementów tablicy:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("dodTab").innerHTML = Owoce;
+
+function Dodawanie() {
+Owoce.push("Pomarańcza");
+document.getElementById("dodTab").innerHTML = Owoce;
+};
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4> 
+
+            <button onclick="Dodawanie()">Dodaj do tablicy</button>
+
+            <p id="dodTab">
+            	
+            </p>            
+
+      	</div>
+
+      	<div class="c">
+
+            <h2>Tablice cz.2: </h2>
+
+            <h3>1. Konwersja tablicy na wartości tablicowe:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("konwTab").innerHTML = Owoce.toString();
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4> 
+
+            <p id="konwTab">
+            	
+            </p>
+
+            <h3>2. Usuwanie ostatniego elementu tablicy:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("pop1").innerHTML = Owoce;
+
+Owoce.pop();
+document.getElementById("pop2").innerHTML = Owoce;
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4> 
+
+            <p id="pop1">
+            	
+            </p>
+            <p id="pop2">
+            	
+            </p>
+
+            <h3>3. Dodawanie elementu tablicy (na końcu):</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("push").innerHTML = Owoce;
+
+function Dodawanie() {
+Owoce.push("Cytryna");
+document.getElementById("push").innerHTML  = Owoce;
+}
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <button onclick="Dodawanie()">Dodaj</button> 
+
+            <p id="push">
+            	
+            </p>
+
+            <h3>4. Usuwanie elementu tablicy (pierwszego):</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("shift1").innerHTML = Owoce;
+
+Owoce.shift();
+document.getElementById("shift2").innerHTML = Owoce;
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <p id="shift1">
+            	
+            </p> 
+
+            <p id="shift2">
+            	
+            </p>
+
+            <h3>5. Dodawanie elementu tablicy (pierwszego):</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("unshift").innerHTML = Owoce;
+
+function Dodawanie() {
+Owoce.unshift("Cytryna");
+document.getElementById("unshift").innerHTML = Owoce;
+}
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <button onclick="Dodawanie()">Dodaj</button>
+
+            <p id="unshift">
+            	
+            </p>
+
+            <h3>6. Dodawanie i usuwanie elementu tablicy (na dowolnym miejscu):</h3>
+
+            <h4>a) Dodawanie: </h4>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka"];
+document.getElementById("splice1").innerHTML = "Oryginalna tablica:<br>" + Owoce;
+
+function Dodawanie() {
+Owoce.splice(2, 0, "Cytryna", "Pomarańcza");
+document.getElementById("splice2").innerHTML = "Zmodyfikowana tablica:<br>" + Owoce;
+}
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <button onclick="Dodawanie()">Dodaj</button>
+
+            <p id="splice1">
+            	
+            </p>
+
+            <p id="splice2">
+            	
+            </p>
+
+            <h4>b) Usuwanie: </h4>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+document.getElementById("splice3").innerHTML = Owoce;
+
+function Usuwanie() {
+Owoce.splice(0, 1);
+document.getElementById("splice3").innerHTML = Owoce;
+}
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <button onclick="Usuwanie()">Usuń</button>
+
+            <p id="splice3">
+            	
+            </p>
+
+            <h3>7. Łączenie tablic:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Chłopcy = ["Piotr", "Paweł", "Tomek"];
+var Dziewczyny = ["Ania", "Kasia"];
+var Dzieci = Chłopcy.concat(Dziewczyny);
+
+document.getElementById("Chłopcy").innerHTML = "Pierwsza tablica:<br>" + Chłopcy;
+document.getElementById("Dziewczyny").innerHTML = "Druga tablica:<br>" +Dziewczyny;
+document.getElementById("concat").innerHTML = "Połączone tablice:<br>" + Dzieci;
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <p id="Chłopcy">
+            	
+            </p>
+
+            <p id="Dziewczyny">
+            	
+            </p>
+
+            <p id="concat">
+            	
+            </p>
+
+            <h3>8. Tworzenie nowej tablicy poprzez wycięcie elementu istniejącej tablicy:</h3>
+
+            <p id="string"></p>
+
+            <h4>
+                Składnia: 
+            </h4>
+
+            <p>
+
+            	<pre>
+var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+var Cytrusy = Owoce.slice(3);
+document.getElementById("slice").innerHTML = Owoce + "<br><br>" + Cytrusy;
+            	</pre>
+            
+            </p>
+
+            <h4>
+            	Wynik:
+            </h4>
+
+            <p id="slice">
+            	
+            </p>
+
+        </div>    
+
+      	<script>
+                  var x = 123;
+                  document.getElementById("wynik").innerHTML =
+                  x.toString() + "<br>" +
+                  x.valueOf();
+        </script>
+
+        <script>
+                  var x = 9.656;
+                  document.getElementById("notacja").innerHTML =
+                  x.toExponential() + "<br>" + 
+                  x.toExponential(2) + "<br>" + 
+                  x.toExponential(4) + "<br>" + 
+                  x.toExponential(6);
+        </script>
+
+        <script>
+                  var x = 9.656;
+                  document.getElementById("przyb").innerHTML =
+                  x.toFixed(0) + "<br>" +
+                  x.toFixed(2) + "<br>" +
+                  x.toFixed(4) + "<br>" +
+                  x.toFixed(6);
+        </script>
+
+        <script>
+                  var x = 9.656;
+                  document.getElementById("przyb2").innerHTML = 
+                  x.toPrecision() + "<br>" +
+                  x.toPrecision(2) + "<br>" +
+                  x.toPrecision(4) + "<br>" +
+                  x.toPrecision(6);  
+        </script>
+
+        <script type="text/javascript">
+
+            	document.getElementById("number").innerHTML = 
+                  Number(true) + "<br>" +
+                  Number(false) + "<br>" +
+                  Number("10");
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	document.getElementById("number2").innerHTML = 
+                  parseInt("10") + "<br>" +
+                  parseInt("10.33") + "<br>" +
+                  parseInt("10 6");
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	document.getElementById("number3").innerHTML = 
+                  parseFloat("10") + "<br>" +
+                  parseFloat("10.33") + "<br>" +
+                  parseFloat("10 6");
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var x = Number.MAX_VALUE;
+                  document.getElementById("max").innerHTML = x;
+                  var y = Number.MIN_VALUE;
+                  document.getElementById("min").innerHTML = y;
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+            	document.getElementById("dłTab").innerHTML = Owoce.length;
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+            	document.getElementById("dodTab").innerHTML = Owoce;
+
+            	function Dodawanie() {
+            		Owoce.push("Pomarańcza");
+            		document.getElementById("dodTab").innerHTML = Owoce;
+            	}
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+            	document.getElementById("konwTab").innerHTML = Owoce.toString(); 
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+            	document.getElementById("pop1").innerHTML = Owoce;
+
+                Owoce.pop();
+                document.getElementById("pop2").innerHTML = Owoce;
+            	
+        </script>
+
+        <script type="text/javascript">
+
+            	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+            	document.getElementById("push").innerHTML = Owoce;
+
+            	function Dodawanie() {
+            		Owoce.push("Cytryna");
+            		document.getElementById("push").innerHTML  = Owoce;
+            	}
+            	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+        	document.getElementById("shift1").innerHTML = Owoce;
+
+        	Owoce.shift();
+        	document.getElementById("shift2").innerHTML = Owoce;
+        	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+        	document.getElementById("unshift").innerHTML = Owoce;
+
+        	function Dodawanie() {
+        		Owoce.unshift("Cytryna");
+        		document.getElementById("unshift").innerHTML = Owoce;
+        	}
+        	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Owoce = ["Jabłko", "Banan", "Gruszka"];
+        	document.getElementById("splice1").innerHTML = "Oryginalna tablica:<br>" + Owoce;
+
+            function Dodawanie() {
+            	Owoce.splice(2, 0, "Cytryna", "Pomarańcza");
+            	document.getElementById("splice2").innerHTML = "Zmodyfikowana tablica:<br>" + Owoce;
+            }
+        	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+        	document.getElementById("splice3").innerHTML = Owoce;
+
+        	function Usuwanie() {
+            	Owoce.splice(0, 1);
+            	document.getElementById("splice3").innerHTML = Owoce;
+            }
+        	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Chłopcy = ["Piotr", "Paweł", "Tomek"];
+        	var Dziewczyny = ["Ania", "Kasia"];
+        	var Dzieci = Chłopcy.concat(Dziewczyny);
+
+            document.getElementById("Chłopcy").innerHTML = "Pierwsza tablica:<br>" + Chłopcy;
+            document.getElementById("Dziewczyny").innerHTML = "Druga tablica:<br>" +Dziewczyny;
+        	document.getElementById("concat").innerHTML = "Połączone tablice:<br>" + Dzieci;
+        	
+        </script>
+
+        <script type="text/javascript">
+
+        	var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+        	var Cytrusy = Owoce.slice(3);
+        	document.getElementById("slice").innerHTML = Owoce + "<br><br>" + Cytrusy; 
+        	
+        </script>
+
+      </body>
+
+</html>

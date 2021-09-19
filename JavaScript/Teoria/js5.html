@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+    
+           <meta http-equiv="refresh" content="30">
+           <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+
+	       <title></title>
+
+	       <style type="text/css">
+
+	       	.a {
+	       		border: 5px solid red;
+	       		float: left;
+	       	}
+
+	       	.b {
+	       		border: 5px solid green;
+	       		float: left;
+	       	}
+	       	
+	       </style>
+
+      </head>
+
+      <body>
+
+      	<div class="a">
+
+      		<h2>Sortowanie tablic: </h2>
+
+      		<h3>1. Sortowanie A-Z: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna", "Pomarańcza"];
+document.getElementById("sortA-Z").innerHTML = Owoce;
+
+function Sortowanie() {
+Owoce.sort();
+document.getElementById("sortA-Z").innerHTML = Owoce;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<button onclick="Sortowanie()">Sortuj</button>
+
+      		<p id="sortA-Z">
+      			
+      		</p>
+
+      		<p id="sortA-Z1">
+      			
+      		</p>
+
+      		<h3>2. Sortowanie Z-A: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna", "Pomarańcza"];
+document.getElementById("sortAlfab").innerHTML = Owoce;
+
+function Sortowanie() {
+Owoce.sort();
+document.getElementById("sortAlfab1").innerHTML = Owoce;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<button onclick="Sortowanie()">Sortuj</button>
+
+      		<p id="sortZ-A">
+      			
+      		</p>
+
+      		<p id="sortZ-A1">
+      			
+      		</p>
+
+      		<h3>3. Sortowanie liczb: </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [40, 100, 1, 25, 10];
+document.getElementById("sortLicz").innerHTML = Liczby;
+
+function Sortowanie() {
+Liczby.sort(function(a, b){return a - b});
+document.getElementById("sortLicz").innerHTML = Liczby;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<button onclick="Sortowanie()">Sortuj</button>
+
+      		<p id="sortLicz">
+      			
+      		</p>
+
+      		<h3>4 Znajdowanie największej (najmniejszej) wartości tablicy: </h3>
+
+      		<h4>a) Pierwsza wersja: </h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [40, 100, 1, 5, 25, 10];
+Liczby.sort(function(a, b){return a - b});
+document.getElementById("min").innerHTML = Liczby[0];
+
+Liczby.sort(function(a, b){return b - a});
+document.getElementById("max").innerHTML = Liczby[0];
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<p>
+
+      			Najmniejsza wartość to <span id="min"></span>.
+      			
+      		</p>
+
+      		<p>
+
+      			Największa wartość to <span id="max"></span>.
+      			
+      		</p>
+
+      		<h4>b) Druga wersja: </h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [40, 100, 1, 5, 25, 10];
+document.getElementById("max1").innerHTML = tabMax(Liczby);
+document.getElementById("min1").innerHTML = tabMin(Liczby);
+
+function tabMax(tab) {
+return Math.max.apply(null, tab);
+}
+
+function tabMin(tab) {
+return Math.min.apply(null, tab);
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<p>
+
+      			Najmniejsza wartość to <span id="min1"></span>.
+      			
+      		</p>
+
+      		<p>
+
+      			Największa wartość to <span id="max1"></span>.
+      			
+      		</p>
+
+      		<h4>c) Trzecia wersja:</h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [40, 100, 1, 5, 25, 10];
+document.getElementById("max2").innerHTML = tabMax(Liczby);
+
+function tabMax(tab) {
+    var ile = tab.length;
+    var max = -Infinity;
+    while (ile--) {
+        if (tab[ile] > max) {
+            max = tab[ile];
+        }
+    }
+    return max;
+}
+
+document.getElementById("min2").innerHTML = tabMin(Liczby);
+
+function tabMin(tab) {
+    var ile = tab.length;
+    var min = Infinity;
+    while (ile--) {
+      	if (tab[ile] < min) {
+      		min = tab[ile];
+      	}
+    }
+    return min;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<p>
+
+      			Najmniejsza wartość to <span id="min2"></span>.
+      			
+      		</p>
+
+      		<p>
+
+      			Największa wartość to <span id="max2"></span>.
+      			
+      		</p>
+
+      		<h3>5. Sortowanie tablic obiektów: </h3>
+
+      		<h4>a) Numbers:</h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Auta = [
+    {marka: "Volvo", rocznik: 2016},
+    {marka: "Audi", rocznik: 2001},
+    {marka: "BMW", rocznik: 2010}  
+];
+
+wyśAuta();
+
+function SortowanieRocznik() {
+   Auta.sort(function(a, b){return a.rocznik - b.rocznik});
+   wyśAuta();
+}
+
+function wyśAuta() {
+   document.getElementById("sortRocz").innerHTML = 
+   Auta[0].marka + " " + Auta[0].rocznik + "<br>" + 
+   Auta[1].marka + " " + Auta[1].rocznik + "<br>" +
+   Auta[2].marka + " " + Auta[2].rocznik;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<button onclick="SortowanieRocznik()">Sortuj</button>
+
+      		<p id="sortRocz">
+      			
+      		</p>
+
+      		<h4>b) Strings:</h4>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      			<pre>
+
+var Auta = [
+    {marka: "Volvo", rocznik: 2016},
+    {marka: "Audi", rocznik: 2001},
+    {marka: "BMW", rocznik: 2010}  
+];
+
+wyśAuta();
+
+function SortowanieMarka() {
+   Auta.sort(function(a, b){
+      var x = a.marka.toLowerCase();
+      var y = b.marka.toLowerCase();
+      if (x < y) {return -1;}
+      if (x > y) {return 1;}
+      return 0;
+   });
+   wyśAuta();
+}
+
+function wyśAuta() {
+   document.getElementById("sortMarka").innerHTML = 
+   Auta[0].marka + " " + Auta[0].rocznik + "<br>" + 
+   Auta[1].marka + " " + Auta[1].rocznik + "<br>" +
+   Auta[2].marka + " " + Auta[2].rocznik;
+}
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+      			Wynik:      			
+      		</h4>
+
+      		<button onclick="SortowanieMarka()">Sortuj</button>
+
+      		<p id="sortMarka">
+      			
+      		</p>
+      		
+      	</div>
+
+      	<div class="b">
+
+      		<h2>Iteracja tablic: </h2>
+
+      		<h3>1. forEach(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var txt = "";
+var Liczby = [45, 4, 9, 16, 25];
+Liczby.forEach(Wywołanie);
+document.getElementById("wywołanie").innerHTML = txt;
+
+function Wywołanie(wartość) {
+   txt = txt + wartość + "<br>";
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="wywołanie">
+      			
+      		</p>
+
+      		<h3>2. map(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby1 = [45, 4, 9, 16, 25];
+var Liczby2 = Liczby1.map(nowaTab);
+
+document.getElementById("map").innerHTML = Liczby2;
+
+function nowaTab(wartość) {
+   return wartość * 2;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="map">
+      			
+      		</p>
+
+      		<h3>3. filter(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [45, 4, 9, 16, 25];
+var pow18 = Liczby.filter(nowaTab);
+
+document.getElementById("filter").innerHTML = pow18;
+
+function nowaTab(wartość) {
+   return wartość > 18;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="filter">
+      			
+      		</p>
+
+      		<h3>4. reduce(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby1 = [45, 4, 9, 16, 25];
+var sum = Liczby1.reduce(SumowanieElementów);
+
+document.getElementById("suma").innerHTML = "Suma elementów tablicy wynosi: " + sum;
+
+function SumowanieElementów(suma, wartość) {
+   return suma + wartość;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="suma">
+      			
+      		</p>
+
+      		<h3>5. every(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [45, 4, 9, 16, 25];
+var wszystPow18 = Liczby.every(WiększeOd18);
+
+document.getElementById("every").innerHTML = "Zdanie 'Wszystkie elementy tablicy są większe od 18' jest: " + wszystPow18;
+
+function WiększeOd18(wartość) {
+   return wartość > 18;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="every">
+      			
+      		</p>
+
+      		<h3>6. some(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [45, 4, 9, 16, 25];
+var kilkaPow18 = Liczby.some(WiększeOd18);
+
+document.getElementById("some").innerHTML = "Zdanie 'Kilka elementów tablicy jest większe od 18' jest: " + kilkaPow18;
+
+function WiększeOd18(wartość) {
+   return wartość > 18;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="some">
+      			
+      		</p>
+
+      		<h3>7. indexOf(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+var a = Owoce.indexOf("Banan");
+document.getElementById("index").innerHTML = "'Banan' został znaleziony na pozycji: " + a;      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="index">
+      			
+      		</p>
+
+      		<h3>8. find(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [4, 9, 16, 25, 29];
+var Pierwsza = Liczby.find(PierwszaLiczbaPow18);
+
+document.getElementById("find").innerHTML = "Pierwszy element tablicy większy od 18 to: " + Pierwsza;
+
+function PierwszaLiczbaPow18(wartość) {
+   return wartość > 18;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="find">
+      			
+      		</p>
+
+      		<h3>9. findIndex(): </h3>
+
+      		<p id="string"></p>
+
+      		<h4>
+      			Składnia:
+      		</h4>
+
+      		<p>
+
+      		<p>
+
+      			<pre>
+
+var Liczby = [4, 9, 16, 25, 29];
+var Pierwsza = Liczby.findIndex(IndexPow18);
+
+document.getElementById("fIndex").innerHTML = "Pierwszy element tablicy większy od 18 jest na miejscu: " + Pierwsza;
+
+function IndexPow18(wartość) {
+   return wartość > 18;
+}      				
+      				
+      			</pre>
+      			
+      		</p>
+
+      		<h4>
+
+      			Wynik:
+      			
+      		</h4>
+
+      		<p id="fIndex">
+      			
+      		</p>
+
+      	</div>
+
+      	<script type="text/javascript">
+
+      		var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna", "Pomarańcza"];
+      		document.getElementById("sortA-Z").innerHTML = Owoce;
+
+      		function Sortowanie() {
+      			Owoce.sort();
+      			document.getElementById("sortA-Z1").innerHTML = Owoce;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna", "Pomarańcza"];
+      		document.getElementById("sortZ-A").innerHTML = Owoce;
+
+      		function Sortowanie() {
+      			Owoce.sort();
+      			Owoce.reverse();
+      			document.getElementById("sortZ-A1").innerHTML = Owoce;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [40, 100, 1, 25, 10];
+      		document.getElementById("sortLicz").innerHTML = Liczby;
+
+      		function Sortowanie() {
+      			Liczby.sort(function(a, b){return a - b});
+      			document.getElementById("sortLicz").innerHTML = Liczby;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [40, 100, 1, 5, 25, 10];
+      		Liczby.sort(function(a, b){return a - b});
+      		document.getElementById("min").innerHTML = Liczby[0];
+
+      		Liczby.sort(function(a, b){return b - a});
+      		document.getElementById("max").innerHTML = Liczby[0];
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [40, 100, 1, 5, 25, 10];
+      		document.getElementById("max1").innerHTML = tabMax(Liczby);
+      		document.getElementById("min1").innerHTML = tabMin(Liczby);
+
+      		function tabMax(tab) {
+      			return Math.max.apply(null, tab);
+      		}
+
+      		function tabMin(tab) {
+      			return Math.min.apply(null, tab);
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [40, 100, 1, 5, 25, 10];
+      		document.getElementById("max2").innerHTML = tabMax(Liczby);
+
+      		function tabMax(tab) {
+      			var ile = tab.length;
+      			var max = -Infinity;
+      			while (ile--) {
+      				if (tab[ile] > max) {
+      					max = tab[ile];
+      				}
+      			}
+      			return max;
+      		}
+
+      		document.getElementById("min2").innerHTML = tabMin(Liczby);
+
+      		function tabMin(tab) {
+      			var ile = tab.length;
+      			var min = Infinity;
+      			while (ile--) {
+      				if (tab[ile] < min) {
+      					min = tab[ile];
+      				}
+      			}
+      			return min;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Auta = [
+      		   {marka: "Volvo", rocznik: 2016},
+      		   {marka: "Audi", rocznik: 2001},
+      		   {marka: "BMW", rocznik: 2010}  
+      		];
+
+      		wyśAuta();
+
+      		function SortowanieRocznik() {
+      			Auta.sort(function(a, b){return a.rocznik - b.rocznik});
+      			wyśAuta();
+      		}
+
+      		function wyśAuta() {
+      			document.getElementById("sortRocz").innerHTML = 
+      			Auta[0].marka + " " + Auta[0].rocznik + "<br>" + 
+      			Auta[1].marka + " " + Auta[1].rocznik + "<br>" +
+      			Auta[2].marka + " " + Auta[2].rocznik;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Auta = [
+      		   {marka: "Volvo", rocznik: 2016},
+      		   {marka: "Audi", rocznik: 2001},
+      		   {marka: "BMW", rocznik: 2010}  
+      		];
+
+      		wyśAuta();
+
+      		function SortowanieMarka() {
+      			Auta.sort(function(a, b){
+      				var x = a.marka.toLowerCase();
+      				var y = b.marka.toLowerCase();
+      				if (x < y) {return -1;}
+      				if (x > y) {return 1;}
+      				return 0;
+      			});
+      			wyśAuta();
+      		}
+
+      		function wyśAuta() {
+      			document.getElementById("sortMarka").innerHTML = 
+      			Auta[0].marka + " " + Auta[0].rocznik + "<br>" + 
+      			Auta[1].marka + " " + Auta[1].rocznik + "<br>" +
+      			Auta[2].marka + " " + Auta[2].rocznik;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var txt = "";
+      		var Liczby = [45, 4, 9, 16, 25];
+      		Liczby.forEach(Wywołanie);
+      		document.getElementById("wywołanie").innerHTML = txt;
+
+      		function Wywołanie(wartość) {
+      			txt = txt + wartość + "<br>";
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby1 = [45, 4, 9, 16, 25];
+      		var Liczby2 = Liczby1.map(nowaTab);
+
+      		document.getElementById("map").innerHTML = Liczby2;
+
+      		function nowaTab(wartość) {
+      			return wartość * 2;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [45, 4, 9, 16, 25];
+      		var pow18 = Liczby.filter(nowaTab);
+
+      		document.getElementById("filter").innerHTML = pow18;
+
+      		function nowaTab(wartość) {
+      			return wartość > 18;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby1 = [45, 4, 9, 16, 25];
+      		var sum = Liczby1.reduce(SumowanieElementów);
+
+      		document.getElementById("suma").innerHTML = "Suma elementów tablicy wynosi: " + sum;
+
+      		function SumowanieElementów(suma, wartość) {
+      			return suma + wartość;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [45, 4, 9, 16, 25];
+      		var wszystPow18 = Liczby.every(WiększeOd18);
+
+      		document.getElementById("every").innerHTML = "Zdanie 'Wszystkie elementy tablicy powyżej 18' jest: " + wszystPow18;
+
+      		function WiększeOd18(wartość) {
+      			return wartość > 18;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [45, 4, 9, 16, 25];
+      		var kilkaPow18 = Liczby.some(WiększeOd18);
+
+      		document.getElementById("some").innerHTML = "Zdanie 'Kilka elementów tablicy jest większe od 18' jest: " + kilkaPow18;
+
+      		function WiększeOd18(wartość) {
+      			return wartość > 18;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Owoce = ["Jabłko", "Banan", "Gruszka", "Cytryna"];
+      		var a = Owoce.indexOf("Banan");
+      		document.getElementById("index").innerHTML = "'Banan' został znaleziony na pozycji: " + a;
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [4, 9, 16, 25, 29];
+      		var Pierwsza = Liczby.find(PierwszaLiczbaPow18);
+
+      		document.getElementById("find").innerHTML = "Pierwszy element tablicy większy od 18 to: " + Pierwsza;
+
+      		function PierwszaLiczbaPow18(wartość) {
+      			return wartość > 18;
+      		}
+      		
+      	</script>
+
+      	<script type="text/javascript">
+
+      		var Liczby = [4, 9, 16, 25, 29];
+      		var Pierwsza = Liczby.findIndex(IndexPow18);
+
+      		document.getElementById("fIndex").innerHTML = "Pierwszy element tablicy większy od 18 jest na miejscu: " + Pierwsza;
+
+      		function IndexPow18(wartość) {
+      			return wartość > 18;
+      		}
+      		
+      	</script>
+
+      </body>
+
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   	   <meta http-equiv="refresh" content="30">
+   	   <meta name="viewport" content="witdh=device-witdh, initial-scale=1">
+
+	   <title></title>
+
+	   <style type="text/css">
+
+	   	   .a {
+	   	   	   border: 5px solid red;
+	   	   	   float: left;
+	   	   }
+
+	   	   .b {
+	   	   	   border: 5px solid green;
+	   	   	   float: left;
+	   	   }
+
+	   	   .c {
+	   	   	   border: 5px solid yellow;
+	   	   	   float: left;
+	   	   }
+
+	   	   .green {
+	   	   	   color: green;
+	   	   }
+
+	   	   .red {
+	   	   	   color: red;
+	   	   }
+	   	
+	   </style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Wyrażenia regularne: </h2>
+
+   	   	   <h3>1. search(): </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var str = "Jabłko, Banan i Gruszka.";
+var n = str.search(/banan/i);
+document.getElementById("sr").innerHTML = n;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p>Wyszukanie ciągu "banan" i wyświetlenie jego pozycji:</p>
+
+      	   <p id="sr">
+      	   	
+      	   </p>
+
+      	   <h3>2. replace(): </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Zastąp() {
+   	var str = document.getElementById("rep").innerHTML;
+   	var txt = str.replace(/banan/i, "Cytryna");
+   	document.getElementById("rep").innerHTML = txt;
+}      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p>Zastąp "Banan" słowem "Cytryna" w poniższym akapicie:</p>
+
+      	   <button onclick="Zastąp()">Spróbuj!</button>
+
+      	   <p id="rep">
+      	   	   Jabłko, Banan, i Gruszka.
+      	   </p>
+
+      	   <h3>3. test(): </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+text = document.getElementById("a1").innerHTML;
+document.getElementById("test").innerHTML = /e/.test(text);      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p>Wyszukaj "e" w następnym akapicie:</p>
+
+      	   <p id="a1">
+      	   	   Jabłko, Banan, i Gruszka.
+      	   </p>
+
+      	   <p id="test">
+      	   	
+      	   </p>
+
+      	   <h3>4. exec(): </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var obj = /e/.exec("Ziemniak, pomidor i marchewka.");
+document.getElementById("exec").innerHTML = "Znaleziono " + obj[0] + " na pozycji " + obj.index + " w tekście: " + obj.input;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="exec">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="b">
+
+           <h2>Znajdowanie błędów: </h2>
+
+   	   	   <h3>1. <i>try</i> i <i>catch</i>: </h3>
+
+   	   	   <h4>a) Składnia ogólna:</h4>
+
+      	   <p id="string"></p>
+
+      	   <p>
+
+      	   	   <pre>
+<span class="red">try</span> {
+   <span class="green">// Blok kodu do sprawdzenia</span>
+}
+<span class="red">catch</span>(err) {
+   <span class="green">// Blok kodu do wychwycenia błedów</span>
+}      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>b) Przykład:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+try {
+   	alertt("Cześć!");
+}
+catch (err) {
+   	document.getElementById("tc").innerHTML = err.message;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="tc"></p>
+
+      	   <h3>2. <i>finally</i>: </h3>
+
+   	   	   <h4>a) Składnia ogólna:</h4>
+
+      	   <p id="string"></p>
+
+      	   <p>
+
+      	   	   <pre>
+<span class="red">try</span> {
+   <span class="green">// Blok kodu do sprawdzenia</span>
+}
+<span class="red">catch</span>(err) {
+   <span class="green">// Blok kodu do wychwycenia błedów</span>
+}
+<span class="red">finally</span> {
+   <span class="green">// Blok kodu do wykonania niezależnie od wyniku try/catch</span>
+}      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>b) Przykład:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Sprawdzenie() {
+
+   var message, x;
+   message = document.getElementById("p01");
+   message.innerHTML = "";
+   x = document.getElementById("f").value;
+
+   try {
+   	   if (x == "") throw "nie została podana";
+   	   if (isNaN(x)) throw "nie jest liczbą";
+   	   x = Number(x);
+       if (x > 10) throw "jest za duża";
+   	   if (x < 5) throw "jest za mała";
+   }
+   catch (err) {
+   	   message.innerHTML = "Liczba " + err;
+   }
+   finally {
+   	   document.getElementById("f").value = "";
+   	}
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p>Wpisz liczbę z przedziału: 5-10:</p>
+
+      	   <input id="f" type="text">
+      	   <button onclick="Sprawdzenie()">Sprawdź!</button>
+
+      	   <p id="p01"></p>
+   	   	
+   	   </div>
+
+   	   <div class="c">
+
+   	   	   <h2>Słowo kluczowe <i>this</i>:</h2>
+
+   	   	   <h3>1. Przykłady użycia:</h3>
+
+           <h4>a) Przykład 1:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var osoba = {
+   	Imię: "Adam",
+   	Nazwisko: "Nowak",
+   	id: 1010,
+   	ImieNazwisko: function() {
+   	   	return this.Imię + " " + this.Nazwisko;
+   	}
+};
+
+document.getElementById("p1").innerHTML = osoba.ImieNazwisko();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="p1"></p>
+
+      	   <h4>b) Przykład 2:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = this;
+document.getElementById("p2").innerHTML = x;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="p2"></p>
+
+      	   <h4>c) Przykład 3:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+document.getElementById("p3").innerHTML = Funkcja();
+function Funkcja() {
+   	return this;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="p3"></p>
+
+      	   <h4>d) Przykład 4:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+"use strict";
+document.getElementById("p4").innerHTML = Funkcja();
+function Funkcja() {
+   	return this;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="p4"></p>
+
+      	   <h4>e) Przykład 5:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+ ...onclick="this.style.display='none'">Kliknij, aby mnie usunąć!...
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <button onclick="this.style.display='none'">Kliknij, aby mnie usunąć!</button>
+
+      	   <h4>f) Przykład 6:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   	   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var osoba = {
+   	Imię: "Adam",
+   	Nazwisko: "Nowak",
+   	id: 1010,
+   	Funckja: function() {
+   	   	return this;
+   	}
+};
+
+document.getElementById("p6").innerHTML = osoba.Funkcja();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="p6"></p>
+   	   	
+   	   </div>
+
+   	   <script type="text/javascript">
+
+   	   	   var str = "Jabłko, Banan i Gruszka.";
+   	   	   var n = str.search(/banan/i);
+   	   	   document.getElementById("sr").innerHTML = n;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   function Zastąp() {
+   	   	   	   var str = document.getElementById("rep").innerHTML;
+   	   	   	   var txt = str.replace(/banan/i, "Cytryna");
+   	   	   	   document.getElementById("rep").innerHTML = txt;
+   	   	   }
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   text = document.getElementById("a1").innerHTML;
+   	   	   document.getElementById("test").innerHTML = /e/.test(text);
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var obj = /e/.exec("Ziemniak, pomidor i marchewka.");
+   	   	   document.getElementById("exec").innerHTML = "Znaleziono " + obj[0] + " na pozycji " + obj.index + " w tekście: " + obj.input;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   try {
+   	   	   	   alertt("Cześć!");
+   	   	   }
+   	   	   catch (err) {
+   	   	   	   document.getElementById("tc").innerHTML = err.message;
+   	   	   }
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   function Sprawdzenie() {
+
+   	   	   	   var message, x;
+   	   	   	   message = document.getElementById("p01");
+   	   	   	   message.innerHTML = "";
+   	   	   	   x = document.getElementById("f").value;
+
+   	   	   	   try {
+   	   	   	   	   if (x == "") throw "nie została podana";
+   	   	   	   	   if (isNaN(x)) throw "nie jest liczbą";
+   	   	   	   	   x = Number(x);
+   	   	   	   	   if (x > 10) throw "jest za duża";
+   	   	   	   	   if (x < 5) throw "jest za mała";
+   	   	   	   }
+   	   	   	   catch (err) {
+   	   	   	   	   message.innerHTML = "Liczba " + err;
+   	   	   	   }
+   	   	   	   finally {
+   	   	   	   	   document.getElementById("f").value = "";
+   	   	   	   }
+   	   	   }
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var osoba = {
+   	   	   	   Imię: "Adam",
+   	   	   	   Nazwisko: "Nowak",
+   	   	   	   id: 1010,
+   	   	   	   ImieNazwisko: function() {
+   	   	   	   	   return this.Imię + " " + this.Nazwisko;
+   	   	   	   }
+   	   	   };
+
+   	   	   document.getElementById("p1").innerHTML = osoba.ImieNazwisko();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var x = this;
+   	   	   document.getElementById("p2").innerHTML = x;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   document.getElementById("p3").innerHTML = Funkcja();
+   	   	   function Funkcja() {
+   	   	   	   return this;
+   	   	   }
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   "use strict";
+   	   	   document.getElementById("p4").innerHTML = Funkcja();
+   	   	   function Funkcja() {
+   	   	   	   return this;
+   	   	   }
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+           var osoba = {
+   	   	   	   Imię: "Adam",
+   	   	   	   Nazwisko: "Nowak",
+   	   	   	   id: 1010,
+   	   	   	   Funkcja: function() {
+   	   	   	   	   return this;
+   	   	   	   }
+   	   	   };
+
+   	   	   document.getElementById("p6").innerHTML = osoba.Funkcja();
+   	   	
+   	   </script>
+
+   </body>
+
+</html>

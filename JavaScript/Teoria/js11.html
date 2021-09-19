@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   	   <meta http-equiv="refresh" content="30">
+   	   <meta name="viewport" content="witdh=device-witdh, initial-scale=1">
+
+	   <title></title>
+
+	   <style type="text/css">
+
+	   	   .a {
+	   	   	   border: 5px solid red;
+	   	   	   float: left;
+	   	   }
+
+	   	   .b {
+	   	   	   border: 5px solid green;
+	   	   	   float: left;
+	   	   }
+
+	   	   .c {
+	   	   	   border: 5px solid yellow;
+	   	   	   float: left;
+	   	   }
+	   	
+	   </style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Słowo kluczowe <i>let</i>: </h2>
+
+   	   	   <h3>1. Deklarowanie zmiennych przy pomocy <i>let</i>:</h3>
+
+   	   	   <h4>a) Przykład 1: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 10;
+"Tutaj x jest równe 10"
+
+{
+    let x = 5;
+    "Tutaj 'x' jest równe 2"
+}
+
+"Tutaj x jest równe 10" 
+document.getElementById("l1").innerHTML = x;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="l1">
+      	   	
+      	   </p>
+
+      	   <h4>b) Przykład 2: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+let i = 5;
+for (let i = 0; i < 10; i++) {
+    "blok kodu"
+}
+document.getElementById("l2").innerHTML = i;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="l2">
+      	   	
+      	   </p>
+
+      	   <h4>c) Przykład 3: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+let marka = "Fiat";
+
+"Tutaj kod nie może użyć window.marka"
+document.getElementById("l3").innerHTML = "Nie mogę wyświetlić " + window.marka;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="l3">
+      	   	
+      	   </p>
+
+      	   <h4>d) Przykład 4: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+let y = 2;  "Dozwolone"
+
+{
+    let y = 3;  "Dozwolone"
+}
+
+{
+    let y = 4;  "Dozwolone"
+}
+document.getElementById("l4").innerHTML = x;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="l4">
+      	   	
+      	   </p>
+
+       </div>
+
+       <div class="b">
+
+       	   <h2>Słowo kluczowe <i>const</i>: </h2>
+
+   	   	   <h3>1. Deklarowanie zmiennych przy pomocy <i>const</i>:</h3>
+
+   	   	   <h4>a) Przykład 1: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 10;
+"Tutaj x jest równe 10"
+
+{
+    const x = 5;
+    "Tutaj x jest równe 5"
+}
+"Tutaj x jest równe 10"
+document.getElementById("c1").innerHTML = x;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c1">
+      	   	
+      	   </p>
+
+      	   <h4>b) Przykład 2: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+try {
+    const PI = 3.141592653589793;
+    PI = 3.14;
+}
+catch (err) {
+    document.getElementById("c2").innerHTML = err;
+}
+      	   	      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c2">
+      	   	
+      	   </p>
+
+      	   <h4>c) Przykład 3: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+"Utworzenie obiektu:"
+const auto = {marka: "Fiat", model: "500", kolor: "biały"};
+
+"Zmiana właściwości obiektu:"
+auto.kolor = "czarny";
+
+"Dodanie właściwości obiektu:"
+auto.właściciel = "Adam";
+
+"Wyświetlenie właściwości:"
+document.getElementById("c3").innerHTML = "Właścicielem auta jest " + auto.właściciel;
+      	   	      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c3">
+      	   	
+      	   </p>
+
+      	   <h4>d) Przykład 4: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+try {
+    const auto = {marka: "Fiat", model: "500", kolor: "biały"};
+    auto = {marka: "Volvo", model: "EX60", kolor: "czerwony"};
+}
+catch (err) {
+    document.getElementById("c4").innerHTML = err;
+}
+      	   	      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c4">
+      	   	
+      	   </p>
+
+      	   <h4>e) Przykład 5: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+"Utworzenie tablicy:"
+const auta = ["Saab", "Volvo", "BMW"];
+
+"Zmiana elementu tablicy:"
+auta[0] = "Toyota";
+
+"Dodanie elementu tablicy:"
+auta.push("Audi");
+
+"Wyświetlenie tablicy:"
+document.getElementById("c5").innerHTML = auta;
+      	   	      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c5">
+      	   	
+      	   </p>
+
+      	   <h4>f) Przykład 6: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+try {
+    const auta = ["Saab", "Volvo", "BMW"];
+    auta = ["Toyota", "Volvo", "Audi"];
+}
+catch (err) {
+    document.getElementById("c6").innerHTML = err;
+}
+      	   	      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="c6">
+      	   	
+      	   </p>
+       	
+       </div>
+
+       <div class="c">
+
+       	   <h2>Funkcja strzałkowa: </h2>
+
+   	   	   <h3>1. Różnica pomiędzy zwykłą funkcją a funkcją strzałkową:</h3>
+
+   	   	   <h4>a) Zwykła funkcja: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var hello;
+
+hello = function() {
+    return "Cześć wszystkim!";
+}
+
+document.getElementById("zf").innerHTML = hello();      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="zf">
+      	   	
+      	   </p>
+
+      	   <h4>b) Funkcja strzałkowa: </h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var hello;
+
+hello = () => {
+    return "Cześć wszystkim!"
+}
+
+document.getElementById("fs").innerHTML = hello();      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="fs">
+      	   	
+      	   </p>
+
+      	   <h3>2. Przykłady użycia:</h3>
+
+      	   <h4>a) Przykład 1:</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var hello;
+
+hello = (war) => "Cześć " + war;
+
+document.getElementById("fs1").innerHTML = hello(" i na razie");      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="fs1">
+      	   	
+      	   </p>
+
+      	   <h4>a) Przykład 2 (zwykła funkcja):</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var hello;
+
+hello = function() {
+    document.getElementById("zw1").innerHTML += this;
+}
+
+"Obiekt okna wywołuje funkcję:"
+window.addEventListener("load", hello);
+
+"Obiekt przycisku wywołuje funkcję:" 
+document.getElementById("btn").addEventListener("click", hello);      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <button id="btn">Kliknij!</button>
+
+      	   <p id="zw1">
+      	   	
+      	   </p>
+
+      	   <h4>b) Przykład 2 (funkcja strzałkowa):</h4>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var hello;
+
+hello = () => {
+    document.getElementById("fs2").innerHTML += this;
+}
+
+"Obiekt okna wywołuje funkcję:"
+window.addEventListener("load", hello);
+
+"Obiekt przycisku wywołuje funkcję:" 
+document.getElementById("btn1").addEventListener("click", hello);      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <button id="btn1">Kliknij!</button>
+
+      	   <p id="fs2">
+      	   	
+      	   </p>
+       	
+       </div>
+
+      	   <script type="text/javascript">
+
+      	   	   var x = 10;
+      	   	   "Tutaj x jest równe 10"
+
+      	   	   {
+      	   	   	   let x = 5;
+      	   	   	   "Tutaj 'x' jest równe 2"
+      	   	   }
+
+               "Tutaj x jest równe 10" 
+      	   	   document.getElementById("l1").innerHTML = x;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   let i = 5;
+      	   	   for (let i = 0; i < 10; i++) {
+      	   	   	   "blok kodu"
+      	   	   }
+      	   	   document.getElementById("l2").innerHTML = i;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   let marka = "Fiat";
+
+      	   	   "Tutaj kod nie może użyć window.marka"
+      	   	   document.getElementById("l3").innerHTML = "Nie mogę wyświetlić " + window.marka;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   let y = 2;  "Dozwolone"
+
+      	   	   {
+      	   	   	   let y = 3;  "Dozwolone"
+      	   	   }
+
+      	   	   {
+      	   	   	   let y = 4;  "Dozwolone"
+      	   	   }
+      	   	   document.getElementById("l4").innerHTML = y;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var x = 10;
+      	   	   "Tutaj x jest równe 10"
+
+      	   	   {
+      	   	   	   const x = 5;
+      	   	   	   "Tutaj x jest równe 5"
+      	   	   }
+      	   	   "Tutaj x jest równe 10"
+      	   	   document.getElementById("c1").innerHTML = x;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   try {
+      	   	   	   const PI = 3.141592653589793;
+      	   	   	   PI = 3.14;
+      	   	   }
+      	   	   catch (err) {
+                   document.getElementById("c2").innerHTML = err;
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   "Utworzenie obiektu:"
+      	   	   const auto = {marka: "Fiat", model: "500", kolor: "biały"};
+
+      	   	   "Zmiana właściwości obiektu:"
+      	   	   auto.kolor = "czarny";
+
+      	   	   "Dodanie właściwości obiektu:"
+      	   	   auto.właściciel = "Adam";
+
+      	   	   "Wyświetlenie właściwości:"
+      	   	   document.getElementById("c3").innerHTML = "Właścicielem auta jest " + auto.właściciel;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   try {
+      	   	   	   const auto = {marka: "Fiat", model: "500", kolor: "biały"};
+      	   	   	   auto = {marka: "Volvo", model: "EX60", kolor: "czerwony"};
+      	   	   }
+      	   	   catch (err) {
+      	   	   	   document.getElementById("c4").innerHTML = err;
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   "Utworzenie tablicy:"
+      	   	   const auta = ["Saab", "Volvo", "BMW"];
+
+      	   	   "Zmiana elementu tablicy:"
+      	   	   auta[0] = "Toyota";
+
+      	   	   "Dodanie elementu tablicy:"
+      	   	   auta.push("Audi");
+
+      	   	   "Wyświetlenie tablicy:"
+      	   	   document.getElementById("c5").innerHTML = auta;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   try {
+      	   	   	   const auta = ["Saab", "Volvo", "BMW"];
+      	   	   	   auta = ["Toyota", "Volvo", "Audi"];
+      	   	   }
+      	   	   catch (err) {
+      	   	   	   document.getElementById("c6").innerHTML = err;
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var hello;
+
+      	   	   hello = function() {
+      	   	   	   return "Cześć wszystkim!";
+      	   	   }
+
+      	   	   document.getElementById("zf").innerHTML = hello();
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var hello;
+
+      	   	   hello = () => {
+      	   	   	   return "Cześć wszystkim!"
+      	   	   }
+
+      	   	   document.getElementById("fs").innerHTML = hello();
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var hello;
+
+      	   	   hello = (war) => "Cześć " + war;
+
+      	   	   document.getElementById("fs1").innerHTML = hello(" i na razie");
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var hello;
+
+      	   	   hello = function() {
+      	   	   	   document.getElementById("zw1").innerHTML += this;
+      	   	   }
+
+               "Obiekt okna wywołuje funkcję:"
+      	   	   window.addEventListener("load", hello);
+
+               "Obiekt przycisku wywołuje funkcję:" 
+      	   	   document.getElementById("btn").addEventListener("click", hello);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var hello;
+
+      	   	   hello = () => {
+      	   	   	   document.getElementById("fs2").innerHTML += this;
+      	   	   }
+
+               "Obiekt okna wywołuje funkcję:"
+      	   	   window.addEventListener("load", hello);
+
+               "Obiekt przycisku wywołuje funkcję:" 
+      	   	   document.getElementById("btn1").addEventListener("click", hello);
+      	   	
+      	   </script>
+   	   	
+   	   </div>
+
+   </body>
+
+</html>

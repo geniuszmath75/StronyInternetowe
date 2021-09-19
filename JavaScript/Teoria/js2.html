@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+     <head>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="10">
+      <meta charset="utf-8">
+
+	<title></title>
+
+	<style type="text/css">
+
+		body {
+		      float: left;
+		}
+
+		.kom {
+			color: red;
+		}
+
+		.a {
+			border: 5px solid yellow;
+			float: left;
+		}
+
+		.b {
+			border: 5px solid orange;
+			float: left;
+		}
+		.c {
+			border: 5px solid grey;
+			float: left;
+		}
+
+		.d {
+			border: 5px solid blue;
+			float: right;
+		}
+		
+	</style>
+     
+     </head>
+
+     <body>
+
+     	<div class="a">
+
+     		<h2>Prosty program w JS: </h2>
+
+     		<p id="a"></p>
+     		<p id="b"></p>
+     		<p id="c"></p>
+     		<p id="d"></p>
+
+     		<script type="text/javascript">
+
+     			var a, b, c; // deklaracja zmiennych
+     			a = 55;
+     			b = 11;
+     			c = a / b;
+
+     			document.getElementById("a").innerHTML = 
+     			"a = " + a + "<br>" + "b = " + b + "<br>" + "c = a / b" + "<br>" + "Wartość c jest równa: " + c + ".";
+     			
+     		</script>
+     		
+     	</div>
+
+     	<div class="b">
+
+     		<h2>Komentarze w JS: </h2>
+
+     		<p>Liniowe: <span class="kom">//</span> Tekst</p>
+     		<p>Blokowe: <pre><span class="kom">/*</span> Tekst
+     	Tekst <span class="kom">*/</span> </pre>
+     		</p>
+     		
+     	</div>
+
+     	<div class="c">
+
+     		<h2>Typy danych: </h2>
+
+     		<ol>
+
+     			<h3>
+     				<li>Liczba</li>
+     			</h3>
+
+     			      <p id="typ1">
+
+<pre>
+var x = 10;
+</pre>
+     			      	
+     			      </p>
+
+     			<h3>
+     				<li>String</li>
+     			</h3>
+
+     			      <p id="typ2">
+
+<pre>
+var imie = "Jan";
+</pre>
+     			      	
+     			      </p>
+
+     			<h3>
+     				<li>Wartości logiczne</li>
+     			</h3>
+
+     			      <p id="typ3">
+
+<pre>
+var x = 5;
+var y = 5;
+var z = 6;
+document.getElementById("demo").innerHTML =
+(x == y) + " " + (x == z);
+
+Wynik: true false
+</pre>
+     			      	
+     			      </p>
+
+     			<h3>
+     				<li>Tablice</li>
+     			</h3>
+
+     			      <p id="typ4">
+
+<pre>
+var SysOpe = ["Windows", "Linux", "MacOS"];
+</pre>
+     			      	
+     			      </p>
+
+     			<h3>
+     				<li>Obiekty</li>
+     			</h3>
+
+     			      <p id="typ5">
+
+<pre>
+var osoba = {imie:"Adam", nazwisko:"Nowak",
+wiek:40, KolorOczu:"niebieski"};
+</pre>
+     			      	
+     			      </p>
+
+     			<h3>
+     				<li>Niezdefiniowane</li>
+     			</h3>
+
+     			      <p id="typ6">
+
+<pre>
+var x;
+</pre>
+     			      	
+     			      </p>
+     			
+     		</ol>
+
+     		<p id="typ"></p>
+
+     	</div>
+
+     	<div class="d">
+
+     		<h3>Funkcje: </h3>
+
+     		<p id="f1"></p>
+
+     		<script type="text/javascript">
+
+     			function Mnożenie(p1, p2) {
+     				return p1 * p2;
+     			}
+     			document.getElementById("f1").innerHTML ="Wynik mnożenia jest równy: " +  Mnożenie(5,6) + ".";
+     			
+     		</script>
+
+     		<p id="f2"></p>
+
+     		<script type="text/javascript">
+
+     			var x = Odejmowanie(5,6);
+     			document.getElementById("f2").innerHTML = "a = " + 5 + "<br>" + "b = " + 6 + "<br>" +"Wynik odejmowania jest równy: " + x + ".";
+
+     			function Odejmowanie(a, b) {
+     				return a - b;
+     			}
+     			
+     		</script>
+
+     		<p id="poleTrapez"></p>
+
+     		<script type="text/javascript">
+
+     			function PoleTrapezu( a, b, h) {
+     				return ((a + b) * h) / 2;
+     			}
+     			document.getElementById("poleTrapez").innerHTML = "Pole trapezu dla a = 4, b = 6 i h = 2 wynosi: " + PoleTrapezu(4, 6, 2);
+     			
+     		</script>
+     		
+     	</div>
+
+     </body>
+
+</html>

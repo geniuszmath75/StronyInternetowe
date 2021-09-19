@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+	   <meta http-equiv="refresh" content="30">
+	   <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+
+	   <title></title>
+
+	   <style type="text/css">
+
+		   .a {
+		   	   border: 5px solid red;
+	   	   	   float: left;
+		   }
+
+		   .b {
+		   	   border: 5px solid green;
+	   	   	   float: left;
+		   }
+
+		   .c {
+		   	   border: 5px solid yellow;
+	   	   	   float: left;
+		   }
+
+		   .red {
+		   	   color: red;
+		   }
+
+		   .color {
+		   	   color: orange;
+		   }
+
+		   .color1 {
+		   	   color: blue;
+		   }
+		
+	   </style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Operatory</h2>
+
+   	   	   <h3>1. porównania: </h3>
+
+   	   	   <h4>a) <span class="color">==</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+a) document.getElementById("==").innerHTML = (x == 8);
+b) document.getElementById("==1").innerHTML = (x == 5);
+c) document.getElementById("==2").innerHTML = (x == "5");
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="==">
+      	   	  
+      	   </p>
+
+      	   <p id="==1">
+      	   	  
+      	   </p>
+
+      	   <p id="==2">
+      	   	  
+      	   </p>
+
+      	   <h4>b) <span class="color">===</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+d) document.getElementById("===").innerHTML = "d) " + (x === 5);
+e) document.getElementById("===1").innerHTML = "e) " + (x === "5");
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="===">
+      	   	  
+      	   </p>
+
+      	   <p id="===1">
+      	   	
+      	   </p>
+
+      	   <h4>c) <span class="color">!=</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+f) document.getElementById("!=").innerHTML = "f) " + (x != 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="!=">
+      	   	  
+      	   </p>
+
+      	   <h4>d) <span class="color">!==</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+g) document.getElementById("!==").innerHTML = "g) " + (x !== 5);
+h) document.getElementById("!==1").innerHTML = "h) " + (x !== "5");
+i) document.getElementById("!==2").innerHTML = "i) " + (x !== 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="!==">
+      	   	  
+      	   </p>
+
+      	   <p id="!==1">
+      	   	
+      	   </p>
+
+      	   <p id="!==2">
+      	   	
+      	   </p>
+
+      	   <h4>e) <span class="color">></span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+j) document.getElementById(">").innerHTML = "j) " + (x > 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id=">">
+      	   	  
+      	   </p>
+
+      	   <h4>f) <span class="color"><</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+k) document.getElementById("<").innerHTML = "k) " + (x < 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="<">
+      	   	  
+      	   </p>
+
+      	   <h4>g) <span class="color">>=</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+l) document.getElementById(">=").innerHTML = "l) " + (x >= 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id=">=">
+      	   	  
+      	   </p>
+
+      	   <h4>h) <span class="color"><=</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 5;
+m) document.getElementById("<=").innerHTML = "m) " + (x <= 8);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="<=">
+      	   	  
+      	   </p>
+
+      	   <h3>2. logiczne: </h3>
+
+   	   	   <h4>a) <span class="color1">&&</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 6;
+var y = 3;
+a) document.getElementById("&&").innerHTML = "a) " + (x < 10 && y > 1);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="&&">
+      	   	  
+      	   </p>
+
+      	   <h4>b) <span class="color1">||</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 6;
+var y = 3;
+b) document.getElementById("||").innerHTML = "b) " + (x == 5 || y == 5);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="||">
+      	   	  
+      	   </p>
+
+      	   <h4>c) <span class="color1">!</span></h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var x = 6;
+var y = 3;
+c) document.getElementById("!").innerHTML = "c) " + !(x === y);
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="!">
+      	   	  
+      	   </p>
+
+       </div>
+
+       <div class="b">
+
+       	   <h2>Instrukcje warunkowe: </h2>
+
+   	   	   <h3>1. <span class="red">if</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+if (new Date().getHours() < 18) {
+    document.getElementById("if").innerHTML = "Dzień dobry!";
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p>Jeśli jest przed 18:00 wyświetl "Dzień dobry!":</p>
+
+      	   <p id="if">
+      	   	   Dobry wieczór!
+      	   </p>
+
+      	   <h3>2. <span class="red">else</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Pozdrowienia() {
+    var godz = new Date().getHours();
+    var pozdrowienie;
+
+    if (godz < 18) {
+      	pozdrowienie = "Dzień dobry!";
+    } else {
+      	pozdrowienie = "Dobry wieczór!";
+    }
+
+    document.getElementById("else").innerHTML = pozdrowienie;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p>Kliknij, żeby wyświetlić pozdrowienia zależnie od danej godziny:</p>
+
+      	   <button onclick="Pozdrowienia()">Spróbuj!</button>
+
+      	   <p id="else">
+      	   	
+      	   </p>
+
+      	   <h3>3. <span class="red">else if</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+function Pozdrowienia() {
+    var pozdrowienie;
+    var czas = new Date().getHours();
+
+    if (czas < 18) {
+      	pozdrowienie = "Dzień dobry!";
+    } else if (czas < 22) {
+        pozdrowienie = "Dobry wieczór!";
+    } else {
+      	pozdrowienie = "Dobranoc!";
+    }
+
+    document.getElementById("elseif").innerHTML = pozdrowienie;
+}
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p>Kliknij, żeby wyświetlić pozdrowienia zależnie od danej godziny:</p>
+
+      	   <button onclick="Pozdrowienia1()">Spróbuj!</button>
+
+      	   <p id="elseif">
+      	   	
+      	   </p>
+       	
+       </div>
+
+       <div class="c">
+
+       	   <h2>Instrukcja <span class="red">switch</span>: </h2>
+
+           <h3>1. Składnia ogólna: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var dzień;
+
+switch (new Date().getDay() ) {
+    case 0:
+      	dzień = "Niedziela";
+      	break;
+    case 1:
+      	dzień = "Poniedziałek";
+      	break;
+    case 2:
+      	dzień = "Wtorek";
+      	break;
+    case 3:
+      	dzień = "Środa";
+      	break;
+    case 4:
+      	dzień = "Czwartek";
+      	break;
+    case 5:
+      	dzień = "Piątek";
+      	break;
+    case 6:
+      	dzień = "Sobota";
+}
+document.getElementById("switch1").innerHTML = "Dzisiaj jest " + dzień;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="switch1">
+      	   	
+      	   </p>
+
+      	   <h3>2. <span class="red">default</span>: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text;
+
+switch (new Date().getDay() ) {
+    case 6:
+      	text = "Dzisiaj jest Sobota";
+      	break;
+    case 0:
+      	text = "Dzisiaj jest Niedziela";
+      	break;
+    default:
+      	text = "Oczekiwanie na Weekend";
+}
+document.getElementById("switch2").innerHTML = text;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="switch2">
+      	   	
+      	   </p>
+
+      	   <h3>3. Wspólny kod dla różnych przypadków: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text;
+
+switch (new Date().getDay() ) {
+    case 4:
+    case 5:
+      	text = "Wkrótce będzie Weekend";
+      	break;
+    case 0:
+    case 6:
+      	text = "Teraz jest Weekend";
+      	break;
+    default:
+      	text = "Oczekiwanie na Weekend";
+}
+document.getElementById("switch3").innerHTML = text;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="switch3">
+      	   	
+      	   </p>
+       	
+       </div>
+
+      	   <script type="text/javascript">
+
+      	   	   var x = 5;
+      	   	   document.getElementById("==").innerHTML = "a) " + (x == 8);
+               document.getElementById("==1").innerHTML = "b) " + (x == 5);
+               document.getElementById("==2").innerHTML = "c) " + (x == "5");
+
+               document.getElementById("===").innerHTML = "d) " + (x === 5);
+               document.getElementById("===1").innerHTML = "e) " + (x === "5");
+
+               document.getElementById("!=").innerHTML = "f) " + (x != 8);
+
+               document.getElementById("!==").innerHTML = "g) " + (x !== 5);
+               document.getElementById("!==1").innerHTML = "h) " + (x !== "5");
+               document.getElementById("!==2").innerHTML = "i) " + (x !== 8);
+
+               document.getElementById(">").innerHTML = "j) " + (x > 8);
+
+               document.getElementById("<").innerHTML = "k) " + (x < 8);
+
+               document.getElementById(">=").innerHTML = "l) " + (x >= 8);
+
+               document.getElementById("<=").innerHTML = "m) " + (x <= 8);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var x = 6;
+      	   	   var y = 3;
+      	   	   document.getElementById("&&").innerHTML = "a) " + (x < 10 && y > 1);
+
+      	   	   document.getElementById("||").innerHTML = "b) " + (x == 5 || y == 5);
+
+      	   	   document.getElementById("!").innerHTML = "c) " + !(x === y);
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   if (new Date().getHours() < 18) {
+      	   	   	   document.getElementById("if").innerHTML = "Dzień dobry!";
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   function Pozdrowienia() {
+      	   	   	   var godz = new Date().getHours();
+      	   	       var pozdrowienie;
+
+      	   	       if (godz < 18) {
+      	   	   	       pozdrowienie = "Dzień dobry!";
+      	   	       } else {
+      	   	   	       pozdrowienie = "Dobry wieczór!";
+      	   	       }
+
+      	   	       document.getElementById("else").innerHTML = pozdrowienie;
+      	   	   } 
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   function Pozdrowienia1() {
+      	   	   	   var pozdrowienie;
+      	   	   	   var czas = new Date().getHours();
+
+      	   	   	   if (czas < 18) {
+      	   	   	   	   pozdrowienie = "Dzień dobry!";
+      	   	   	   } else if (czas < 22) {
+                       pozdrowienie = "Dobry wieczór!";
+      	   	   	   } else {
+      	   	   	   	   pozdrowienie = "Dobranoc!";
+      	   	   	   }
+
+      	   	   	   document.getElementById("elseif").innerHTML = pozdrowienie;
+      	   	   }
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var dzień;
+
+      	   	   switch (new Date().getDay() ) {
+      	   	   	   case 0:
+      	   	   	       dzień = "Niedziela";
+      	   	   	       break;
+      	   	   	   case 1:
+      	   	   	       dzień = "Poniedziałek";
+      	   	   	       break;
+      	   	   	   case 2:
+      	   	   	       dzień = "Wtorek";
+      	   	   	       break;
+      	   	   	   case 3:
+      	   	   	       dzień = "Środa";
+      	   	   	       break;
+      	   	   	   case 4:
+      	   	   	       dzień = "Czwartek";
+      	   	   	       break;
+      	   	   	   case 5:
+      	   	   	       dzień = "Piątek";
+      	   	   	       break;
+      	   	   	   case 6:
+      	   	   	       dzień = "Sobota";
+      	   	   }
+      	   	   document.getElementById("switch1").innerHTML = "Dzisiaj jest " + dzień;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var text;
+
+      	   	   switch (new Date().getDay() ) {
+      	   	   	   case 6:
+      	   	   	       text = "Dzisiaj jest Sobota";
+      	   	   	       break;
+      	   	   	   case 0:
+      	   	   	       text = "Dzisiaj jest Niedziela";
+      	   	   	       break;
+      	   	   	   default:
+      	   	   	       text = "Oczekiwanie na Weekend";
+      	   	   }
+      	   	   document.getElementById("switch2").innerHTML = text;
+      	   	
+      	   </script>
+
+      	   <script type="text/javascript">
+
+      	   	   var text;
+
+      	   	   switch (new Date().getDay() ) {
+      	   	   	   case 4:
+      	   	   	   case 5:
+      	   	   	       text = "Wkrótce będzie Weekend";
+      	   	   	       break;
+      	   	   	   case 0:
+      	   	   	   case 6:
+      	   	   	       text = "Teraz jest Weekend";
+      	   	   	       break;
+      	   	   	   default:
+      	   	   	       text = "Oczekiwanie na Weekend";
+      	   	   }
+      	   	   document.getElementById("switch3").innerHTML = text;
+      	   	
+      	   </script>
+
+   </body>
+
+</html>

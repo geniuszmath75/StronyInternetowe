@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   	<meta http-equiv="refresh" content="30">
+   	<meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+
+	<title></title>
+
+	<style type="text/css">
+
+		.a {
+			border: 5px solid red;
+		}
+
+		.b {
+			border: 5px solid green;
+	       	float: left;
+		}
+
+		.c {
+			border: 5px solid yellow;
+	       	float: left;
+		}
+
+		.d {
+			border: 5px solid blue;
+			float: left;
+		}
+		
+	</style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Daty:</h2>
+
+   	   	   <h3>1. Wyświetlanie aktualnej daty: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("data").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="data">
+      	   	
+      	   </p>
+
+      	   <h3>2. Sposoby zapisywania dat: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <span>
+      	   	   	   a) new Date() - aktualna data i czas<br>
+      	   	   	   b) new Date(rok, miesiąc, dzień, godziny, minuty, sekundy,
+      	   	   	   milisekundy) - określona data i czas<br>
+      	   	   	   c) new Date(milisekundy) - czas w milisekundach<br>
+      	   	   	   d) new Date(dateString) - data zapisana stringiem
+      	   	   </span>
+
+      	   	   <pre>
+a) var a = new Date();
+document.getElementById("data").innerHTML = a;
+
+b) var b = new Date(2020, 7, 7, 15, 30, 0, 0)
+document.getElementById("data").innerHTML = b;
+
+c) var c = new Date(2020)
+document.getElementById("c").innerHTML = c;
+
+d) var d = new Date("October 13, 2014 11:13:00");
+document.getElementById("d").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="a">
+      	   	
+      	   </p>
+
+      	   <p id="b">
+      	   	
+      	   </p>
+
+      	   <p id="c">
+      	   	
+      	   </p>
+
+      	   <p id="d">
+      	   	
+      	   </p>
+
+      	   <h3>3. Sposoby wyświetlania dat: </h3>
+
+      	   <h4>a) toUTCString():</h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("date").innerHTML = d.toUTCString();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="date">
+      	   	
+      	   </p>
+
+      	   <h4>b) toDateString():</h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("date1").innerHTML = d.toDateString();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="date1">
+      	   	
+      	   </p>
+
+      	   <h4>c) toISOString():</h4>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("date2").innerHTML = d.toISOString();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="date2">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="b">
+
+   	   	   <h2>Formaty Dat:</h2>
+
+   	   	   <h3>1. Format ISO: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date("2020-08-08T12:16:00Z");
+document.getElementById("ISO").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="ISO">
+      	   	
+      	   </p>
+
+      	   <h3>2. Format 'MM/DD/RRRR': </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date("08/08/2020");
+document.getElementById("short").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="short">
+      	   	
+      	   </p>
+
+      	   <h3>3. Format 'MMM DD RRRR': </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date("Aug 08 2020");
+document.getElementById("long").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="long">
+      	   	
+      	   </p>
+
+      	   <h3>4. Konwersja daty na milisekundy: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var msek = Date.parse("August 08 2020");
+document.getElementById("konw").innerHTML = msek;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="konw">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="c">
+
+   	   	   <h2>Daty - metoda 'get()':</h2>
+
+   	   	   <h3>1. getTime() - zwraca czas w milisekundach od 01.01.1970: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("time").innerHTML = d.getTime();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="time">
+      	   	
+      	   </p>
+
+      	   <h3>2. getFullYear() - zwraca rok: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("full").innerHTML = d.getFullYear();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="full">
+      	   	
+      	   </p>
+
+      	   <h3>3. getMonth() - zwraca miesiąc(0-11): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("month").innerHTML = d.getMonth();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="month">
+      	   	
+      	   </p>
+
+      	   <h3>4. getDate() - zwraca dzień miesiąca(1-31): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("date").innerHTML = d.getDate();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="dzień">
+      	   	
+      	   </p>
+
+      	   <h3>5. getHours() - zwraca godzinę(0-23): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("hour").innerHTML = d.getHours();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="hour">
+      	   	
+      	   </p>
+
+      	   <h3>6. getMinutes() - zwraca minuty(0-59): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("minuta").innerHTML = d.getMinutes();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="minuta">
+      	   	
+      	   </p>
+
+      	   <h3>7. getSeconds() - zwraca sekundy(0-59): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("sekunda").innerHTML = d.getSeconds();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sekunda">
+      	   	
+      	   </p>
+
+      	   <h3>8. getMilliseconds() - zwraca milisekundy(0-999): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("milisekunda").innerHTML = d.getMilliseconds();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="milisekunda">
+      	   	
+      	   </p>
+
+      	   <h3>9. getDay() - zwraca dzień tygodnia(0-6): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+document.getElementById("weekday").innerHTML = d.getDay();
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="weekday">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="d">
+
+           <h2>Daty - metoda 'set()':</h2>
+
+   	   	   <h3>1. setFullYear() - ustawia dowolny rok: </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setFullYear(2020);
+document.getElementById("sfull").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sfull">
+
+      	   	
+      	   </p>
+
+      	   <h3>2. setMonth() - ustawia dowolny miesiąc(0-11): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setMonth(7);
+document.getElementById("smonth").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="smonth">
+      	   	
+      	   </p>
+
+      	   <h3>3. setDate() - ustawia dowolny dzień miesiąca(1-31): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setDate(10);
+document.getElementById("sdzień").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sdzień">
+      	   	
+      	   </p>
+
+      	   <h3>4. setHours() - ustawia dowolną godzinę(0-23): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setHours(15);
+document.getElementById("shour").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="shour">
+      	   	
+      	   </p>
+
+      	   <h3>5. setMinutes() - ustawia dowolną minutę(0-59): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setMinutes(18);
+document.getElementById("sminuta").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="sminuta">
+      	   	
+      	   </p>
+
+      	   <h3>6. setSeconds() - ustawia dowolną sekundę(0-59): </h3>
+
+   	   	   <p id="string"></p>
+
+      	   <h4>
+      		   Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var d = new Date();
+d.setSeconds(20);
+document.getElementById("ssekunda").innerHTML = d;
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	   Wynik:
+      	   </h4>
+
+      	   <p id="ssekunda">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("data").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var a = new Date();
+   	   	document.getElementById("a").innerHTML = a;
+
+   	   	var b = new Date(2020, 7, 7, 15, 30, 0, 0)
+   	   	document.getElementById("b").innerHTML = b;
+
+   	   	var c = new Date(2020)
+   	   	document.getElementById("c").innerHTML = c;
+
+   	   	var d = new Date("October 13, 2014 11:13:00");
+   	   	document.getElementById("d").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("date").innerHTML = d.toUTCString();
+
+   	   	var d = new Date();
+   	   	document.getElementById("date1").innerHTML = d.toDateString();
+
+   	   	var d = new Date();
+   	   	document.getElementById("date2").innerHTML = d.toISOString();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date("2020-08-08T12:16:00Z");
+   	   	document.getElementById("ISO").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date("08/08/2020");
+   	   	document.getElementById("short").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date("Aug 08 2020");
+   	   	document.getElementById("long").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var msek = Date.parse("August 08 2020");
+   	   	document.getElementById("konw").innerHTML = msek;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("time").innerHTML = d.getTime();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("full").innerHTML = d.getFullYear();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("month").innerHTML = d.getMonth();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("dzień").innerHTML = d.getDate();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("hour").innerHTML = d.getHours();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("minuta").innerHTML = d.getMinutes();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("sekunda").innerHTML = d.getSeconds();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("milisekunda").innerHTML = d.getMilliseconds();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	document.getElementById("weekday").innerHTML = d.getDay();
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setFullYear(2020);
+   	   	document.getElementById("sfull").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setMonth(7);
+   	   	document.getElementById("smonth").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setDate(10);
+   	   	document.getElementById("sdzień").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setHours(16);
+   	   	document.getElementById("shour").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setMinutes(18);
+   	   	document.getElementById("sminuta").innerHTML = d;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	var d = new Date();
+   	   	d.setSeconds(20);
+   	   	document.getElementById("ssekunda").innerHTML = d;
+   	   	
+   	   </script>
+
+   </body>
+
+</html>

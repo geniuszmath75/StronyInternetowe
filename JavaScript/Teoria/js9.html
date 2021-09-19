@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+   	   <meta http-equiv="refresh" content="30">
+	   <meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+
+	   <title></title>
+
+	   <style type="text/css">
+
+	   	   .a {
+	   	   	   border: 5px solid red;
+	   	   	   float: left;
+	   	   }
+
+	   	   .b {
+	   	   	   border: 5px solid green;
+	   	   	   float: left;
+	   	   }
+
+	   	   .c {
+	   	   	   border: 5px solid yellow;
+	   	   	   float: left;
+	   	   }
+
+	   	   .green {
+	   	   	   color: green;
+	   	   }
+
+	   	   .for {
+	   	   	   color: red;
+	   	   }
+
+	   	   .i1 {
+	   	   	   color: blue;
+	   	   }
+
+	   	   .i2 {
+	   	   	   color: orange;
+	   	   }
+
+	   	   .i3 {
+	   	   	   color: darkblue;
+	   	   }
+	   	
+	   </style>
+
+   </head>
+
+   <body>
+
+   	   <div class="a">
+
+   	   	   <h2>Pętla <i>for</i>: </h2>
+
+   	   	   <h3>1. Składnia ogólna: </h3>
+
+   	   	   <p id="string">
+   	   	   	
+   	   	   </p>
+
+      	   <p>
+
+      	   	   <pre>
+<span class="for">for</span> (<span class="i1">instrukcja 1</span>; <span class="i2">instrukcja 2</span>; <span class="i3">instrukcja 3</span>) {
+   <span class="green">// blok kodu, który ma być wykonany</span>>
+}
+      	   	   </pre>
+
+      	   <h4>a) <span class="i1">Instrukcja 1</span> jest wykonywana (jednorazowo) przed wykonaniem bloku kodu.</h4>
+
+      	   <h4>b) <span class="i2">Instrukcja 2</span> definiuje warunek wykonania bloku kodu.</h4>
+
+      	   <h4>c) <span class="i3">Instrukcja 3</span> jest wykonywana (za każdym razem) po wykonaniu bloku kodu.</h4>
+
+      	   <h3>2. Przykład 1: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var i;
+
+for (var i = 0; i < 11; i++) {
+   	text += "Liczba to " + i + "<br>";
+}
+
+document.getElementById("p1").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="p1">
+      	   	
+      	   </p>
+
+      	   <h3>3. Przykład 2: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var samochody = ["BMW", "Volvo", "Nissan", "Ford"];
+var i, dł, text;
+
+for (var i = 0, dł = samochody.length, text = ""; i < dł; i++) {
+   	text += samochody[i] + "<br>";
+}
+
+document.getElementById("p2").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="p2">
+      	   	
+      	   </p>
+
+      	   <h3>4. Pętla <i>for/in</i>: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var osoba = {imię: "Piotr", nazwisko: "Nowak", wiek: 25};
+var x;
+
+for (x in osoba) {
+   	text += osoba[x] + " ";
+}
+
+document.getElementById("fin").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="fin">
+      	   	
+      	   </p>
+
+      	   <h3>5. Pętla <i>for/of</i>: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = 'Javascript';
+var x;
+
+for (x of text) {
+   	document.write(x + "<br>");
+}      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p>
+
+       <script type="text/javascript">
+
+   	   	   var text = 'Javascript';
+   	   	   var x;
+
+   	   	   for (x of text) {
+   	   	   	   document.write(x + "<br>");
+   	   	   }
+   	   	
+   	   </script>
+
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="b">
+
+           <h2>Pętla <i>while</i>: </h2>
+
+   	   	   <h3>1. Składnia ogólna: </h3>
+
+   	   	   <p id="string">
+   	   	   	
+   	   	   </p>
+
+      	   <p>
+
+      	   	   <pre>
+<span class="for">while</span> (warunek) {
+   <span class="green">// blok kodu, który ma być wykonany</span>>
+}
+      	   	   </pre>
+
+      	   </p>
+
+      	   <h3>2. Przykład 1: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var i = 0;
+
+while (i < 11) {
+   	text += "Liczba to " + i + "<br>";
+   	i++;
+}
+document.getElementById("w1").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="w1">
+      	   	
+      	   </p>
+
+      	   <h3>3. Pętla <i>do/while</i>: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var i = 0;
+
+do {
+   	text += "Liczba to " + i + "<br>";
+   	i++;
+}
+while (i < 11);
+
+document.getElementById("dow").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="dow">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <div class="c">
+
+   	   	   <h2><i>Break</i> i <i>Continue</i>: </h2>
+
+   	   	   <h3>1. Break: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var i;
+
+for (i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    text += "Liczba to " + i + "<br>";
+}
+document.getElementById("br").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="br">
+      	   	
+      	   </p>
+
+      	   <h3>2. Continue: </h3>
+
+      	   <p id="string"></p>
+
+      	   <h4>
+      	   		Składnia:
+      	   </h4>
+
+      	   <p>
+
+      	   	   <pre>
+var text = "";
+var i;
+
+for (i = 0; i < 11; i++) {
+    if (i === 3) { continue; }
+    text += "Liczba to " + i + "<br>";
+}
+document.getElementById("con").innerHTML = text;      	   	   	
+      	   	   </pre>
+      	   	
+      	   </p>
+
+      	   <h4>
+      	   	    Wynik:
+      	   </h4>
+
+      	   <p id="con">
+      	   	
+      	   </p>
+   	   	
+   	   </div>
+
+   	   <script type="text/javascript">
+
+   	   	   var text = "";
+           var i;
+
+           for (var i = 0; i < 11; i++) {
+   	           text += "Liczba to " + i + "<br>";
+           }
+
+           document.getElementById("p1").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var samochody = ["BMW", "Volvo", "Nissan", "Ford"];
+   	   	   var i, dł, text;
+
+   	   	   for (var i = 0, dł = samochody.length, text = ""; i < dł; i++) {
+   	   	   	   text += samochody[i] + "<br>";
+   	   	   }
+
+   	   	   document.getElementById("p2").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var text = "";
+   	   	   var osoba = {imię: "Piotr", nazwisko: "Nowak", wiek: 25};
+   	   	   var x;
+
+   	   	   for (x in osoba) {
+   	   	   	   text += osoba[x] + " ";
+   	   	   }
+
+   	   	   document.getElementById("fin").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var text = "";
+   	   	   var i = 0;
+
+   	   	   while (i < 11) {
+   	   	   	   text += "Liczba to " + i + "<br>";
+   	   	   	   i++;
+   	   	   }
+   	   	   document.getElementById("w1").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var text = "";
+   	   	   var i = 0;
+
+   	   	   do {
+   	   	   	   text += "Liczba to " + i + "<br>";
+   	   	   	   i++;
+   	   	   }
+   	   	   while (i < 11);
+
+   	   	   document.getElementById("dow").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+   	   	   var text = "";
+           var i;
+
+           for (i = 0; i < 11; i++) {
+               if (i === 3) { break; }
+               text += "Liczba to " + i + "<br>";
+           }
+           document.getElementById("br").innerHTML = text;
+   	   	
+   	   </script>
+
+   	   <script type="text/javascript">
+
+           var text = "";
+           var i;
+
+           for (i = 0; i < 11; i++) {
+               if (i === 3) { continue; }
+               text += "Liczba to " + i + "<br>";
+           }
+           document.getElementById("con").innerHTML = text;
+   	   	
+   	   </script>
+
+   </body>
+
+</html>
