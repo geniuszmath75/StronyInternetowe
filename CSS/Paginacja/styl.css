@@ -1,0 +1,46 @@
+.paginacja {
+    display: inline-block;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 8px 16px;
+    float: left;
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li.active, a:visited {
+    background-color: rgb(100, 200, 255);
+}
+
+li:hover:not(:active) {
+    background-color: grey;
+}
+
+li:hover:active > a{
+    color: red;
+}
+
+li:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+
+li:last-child{
+    border-radius: 0px 5px 5px 0px;
+}
+
+.paginacja {
+    position: absolute;
+    margin-right: -50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+

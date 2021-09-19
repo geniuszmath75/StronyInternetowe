@@ -1,0 +1,28 @@
+#element_z_tlem {
+    border: 3px solid #EEE;
+    background-image: url(tlo1.png), url(tlo2.png), url(tlo3.png);
+    animation: ruch 300s linear infinite alternate;
+}
+
+#akapit {
+    font-size: 24px;
+    width: 300px;
+    margin: 100px auto;
+    padding: 10px;
+    border: 3px solid #EEE;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------ ANIMACJA RUCHOME TŁO --------------------- */
+@keyframes ruch
+{
+    0% { background-position: 0 0, 0 0, 0 0; }
+    100% { background-position: 10000px 0, 7500px 0, 5000px 0; }
+}
+
+/* dla Google Chrome, Safari, Opera 15+ */
+@-webkit-keyframes ruch
+{
+    0% { background-position: 0 0, 0 0, 0 0; }
+    100% { background-position: 10000px 0, 7500px 0, 5000px 0; }
+}

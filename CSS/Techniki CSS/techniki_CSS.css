@@ -1,0 +1,77 @@
+/* -------------------------- Tytuł techniki CSS ---------------------*/
+.tytul {
+    margin: 5px auto;
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    border: 2px dashed #00F;
+}
+
+.tytul span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+/* -------------------------- Cieniowanie elementu CSS --------------*/
+#caly {
+    margin: 0 auto;
+    width: 300px;
+    border: 3px  solid #EEE;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+
+#caly span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: gold;
+    border-radius: 6px 6px 0 0;
+}
+
+#caly p {
+    margin: 4px 15px 15px;
+    padding: 15px;
+    background-color: #EEE;
+    border-radius: 0 0 6px 6px;
+}
+
+#caly h1 {
+    background: url('https://webkod.pl/images/lewy_cien2d.png') left bottom no-repeat, url('https://webkod.pl/images/prawy_cien2d.png') right bottom no-repeat;
+    margin: 0 -14px;
+    padding-bottom: 11px;
+}
+
+/* ------------------ Wyśrodkowanie teksu w pionie CSS ------------*/
+#caly2 {
+    margin: 0 auto;
+    border: 3px solid #FDD700;
+    background-color: #EEE;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+/* ----------------------- Pionowy tekst w elemencie span ----------- */
+.miesiac {
+    margin: 0 auto;
+}
+
+.miesiac span {
+    margin: 5px;
+    display: block;
+    text-transform: uppercase;
+    width: 14px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px;
+    border: 1px solid #AAA;
+    border-radius: 0 6px 0 6px;
+    word-wrap: break-word;
+    float: left;
+}

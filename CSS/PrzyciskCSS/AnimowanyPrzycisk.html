@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Przycisk animowany</title>
+    
+    <style>
+        #a{
+            position: relative;
+            padding:3px 5px 3px 3px;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            background: yellow;
+            padding: 20px 30px;
+            display: inline-block;
+        }
+        #a a:before, #a a:after{
+            content: "";
+            display: block;
+            background: black;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            width: 1px;
+            height: 0%;
+            transition: all 1s;
+            }
+
+        #a a:after{
+            top: unset;
+            left: unset;
+            bottom: 0px;
+            right: 0px;
+        }     
+        
+        #a:hover a:before, #a:hover a:after{
+            height: 100%;
+        }
+        #a:hover a:after{
+            transition-delay: 1s;
+        }
+    </style>
+
+</head>
+<body>
+
+	<div id="a">
+	    <a href="https://google.pl">Klik</a>
+    </div>
+
+</body>
+</html>

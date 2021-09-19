@@ -1,0 +1,38 @@
+#caly_blok {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #AAA;
+}
+
+#caly_blok p {
+    margin: 0;
+}
+
+#caly_blok img {
+    width: 300px;
+    height: 200px;
+    border: none;
+}
+
+#caly_blok span {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#caly_blok a {
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#caly_blok a:hover span {
+    text-decoration: underline;
+}
