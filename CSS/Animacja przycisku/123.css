@@ -1,0 +1,41 @@
+button {
+    padding: 50px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    border: 5px solid black; 
+    text-decoration: none;
+    background-color: powderblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 7px 3px rgba(100, 100, 100, 0.5);
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.button {
+    position: relative;
+}
+
+button:after {
+    display: block;
+    background: #f1f1f1;
+    position: absolute;
+    content: "";
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0;
+}

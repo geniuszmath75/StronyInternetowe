@@ -1,0 +1,54 @@
+#caly {
+    width: 300px;
+    line-height: 30px;
+    position: fixed;
+    left: -270px;
+    transition: 1s;
+}
+
+#caly:hover {
+    left: 0;
+}
+
+#blok1 {
+    float: left;
+    width: 270px;
+}
+
+#blok2 {
+    float: left;
+    width: 30px;
+}
+
+#blok_na_zawartosc {
+    background-color: #FDD700;
+    border: 3px solid #000;
+    border-left: none;
+    border-bottom-right-radius: 6px;
+}
+
+#zawartosc {
+    margin: 0;
+    padding: 5px;
+    height: 150px;
+    overflow: auto;
+}
+
+#uchwyt {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #000;
+    border-radius: 0 6px 6px 0;
+}
+
+#uchwyt:hover {
+    cursor: pointer;
+}
+
+#tekst {
+    color: rgb(248, 56, 56);
+    text-align: center;
+    font-family: 'Lucida Control';
+    font-variant: small-caps;
+}

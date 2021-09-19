@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FormularzJS</title>
+    <link rel="stylesheet" type="text/css" href="css/FormularzJS.css">
+    <meta charset="utf-8">
+
+</head>
+<body>
+	
+  <form action="active" method="POST">
+    <fieldset>
+      <legend><h2>Dane osobowe</h2></legend>
+      <ol>
+        <li><b>Imię</b></li>
+        <input type="text" name="name" placeholder="Podaj imię... " id="imie">
+        <li><b>Nazwisko</b></li>
+        <input type="text" name="lastname" placeholder="Podaj nazwisko... " id="nazwisko">
+        <li><b>Wiek</b></li>
+        <input type="number" name="age" id="wiek">
+        <li><b>Płeć</b></li>
+        <input type="radio" name="plec" id="M">Mężczyzna<br><input type="radio" name="plec" id="K">Kobieta<br>
+        <sub>Czy akceptujesz regulamin?</sub>
+       <sub><input type="checkbox" name="regulamin" id="regulamin"></sub>
+      </ol>
+    </fieldset>   
+  </form>
+
+
+
+<button onclick="powitanie()" id="przycisk" class="przycisk">Zatwierdź</button>
+
+
+<div class="tresc">
+  <p class="trescTekst" id="tresc"></p>
+</div>
+
+<script type="text/javascript">
+  function powitanie() {
+    regulamin = document.getElementById('regulamin').checked;
+    imie = document.getElementById('imie').value;
+    nazwisko = document.getElementById('nazwisko').value;
+    wiek = document.getElementById('wiek').value;
+    M = document.getElementById('M').checked;
+    K = document.getElementById('K').checked;
+    plec = '';
+    powitanie = '';
+    if(regulamin!="" && imie!="" && nazwisko!="" && wiek!="" && (M || K)!="") {
+      if (M) {
+        plec = 'mężczyzna'
+      } else if (K) {
+        plec = 'kobieta'
+      }
+      powitanie = 'Witaj '+imie+' '+nazwisko+'.<br> Masz '+wiek+' lat. Twoja płeć to '+plec+'.'
+      document.getElementById('tresc').innerHTML = (powitanie);
+    } else {
+      alert("Wprowadź swoje dane")
+    }
+  }
+</script>
+</body>
+</html>

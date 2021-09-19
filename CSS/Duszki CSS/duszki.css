@@ -1,0 +1,36 @@
+#menu {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 64px;
+    width: 380px;
+    background-color: #EEE;
+}
+
+#menu li {
+    float: left;
+    margin-left: 15px;
+}
+
+#menu li:first-child {
+    margin-left: 0;
+}
+
+#menu li a {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-image: url('https://webkod.pl/images/all_icons.png');
+    text-indent: -99999px;
+}
+
+#menu #rss a{ background-position: -128px 0;}
+#menu #facebook a { background-position:-256px 0; }
+#menu #share a { background-position:0 -64px; }
+#menu #twitter a { background-position:-128px -64px; }
+
+#menu #wikipedia a:hover { background-position:-64px 0; }
+#menu #rss a:hover { background-position:-192px 0; }
+#menu #facebook a:hover { background-position:-320px 0; }
+#menu #share a:hover { background-position:-64px -64px; }
+#menu #twitter a:hover { background-position:-192px -64px; }

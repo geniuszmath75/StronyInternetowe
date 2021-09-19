@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+     <head>
+
+	     <title>Tworzenie nowego konta</title>
+	     <meta charset="utf-8">
+	     <link rel="stylesheet" type="text/css" href="Formularz.css">
+
+     </head>
+     <body>
+
+     	     <div class="form">
+
+     	           <div class="tytul">
+
+     	           	     <h1>Rejestracja</h1>
+     	           	
+     	           </div>
+     	     	
+     	     <form method="POST" action="Formularz.php">
+
+     	     	           <div class="imie">
+
+     	     	     	     	           <label for="imies">
+     	     	     	     	           	     <span class="opis">
+     	     	     	     	           	     	     <p>Imię</p>
+     	     	     	     	           	     </span>
+     	     	     	     	           </label>
+     	     	     	     	   	     	     	           
+     	     	     	           <span class="imies">
+
+     	     	     	     	           <input type="text" name="imie" placeholder="Podaj imię..." autofocus>
+     	     	     	                 <br>
+     	     	     	     	
+     	     	     	           </span>
+     	     	     	
+     	     	           </div>
+     	     	           <div class="nazwisko">
+     	     	     	           
+     	     	     	     	           <label for="nazwiskos">
+     	     	     	     	                 <span class="opis">
+     	     	     	     	                       <p>Nazwisko</p>
+     	     	     	     	                 </span>
+     	     	     	     	           </label>
+     	     	     	     	    	     	     	           
+     	     	     	           <span class="nazwiskos">
+
+                                   <input type="text" name="nazwisko" placeholder="Podaj nazwisko...">
+                                   <br>
+     	     	     	     	
+     	     	     	           </span>
+     	     	     	
+     	     	           </div>
+     	     	           <div class="login">
+     	     	     	           
+     	     	     	     	           <label for="logins">
+     	     	     	     	                 <span class="opis">
+     	     	     	     	                       <p>Login</p>
+     	     	     	     	                 </span>
+     	     	     	     	           </label>
+     	     	     	     	    	     	     	           
+     	     	     	           <span class="logins">
+
+                                   <input type="text" name="login" pattern="[A-Z a-z 0-9 (.)]{1,}\@{1}[A-Za-z]{1,}\.{1}[A-Z a-z]{1,}" placeholder="Podaj swój login...">
+                                   <br>
+     	     	     	     	
+     	     	     	           </span>
+     	     	     	
+     	     	           </div>
+     	     	           <div class="haslo">
+     	     	     	           
+     	     	     	     	           <label for="haslos">
+     	     	     	     	                 <span class="opis">
+     	     	     	     	                       <p>Hasło</p>
+     	     	     	     	                 </span>
+     	     	     	     	           </label>
+     	     	     	     	         	     	     	           
+     	     	     	           <span class="haslos">
+
+     	     	     	     	           <input type="password" name="haslo" placeholder="Podaj hasło..." pattern="[A-Z a-z 0-9 \w]{8,}">
+     	     	     	     	
+     	     	     	           </span>
+     	     	     	
+     	     	           </div>
+
+     	     	           <div class="submit">
+
+     	     	           	     <span class="submits">
+
+                                   <input type="submit" name="submit" value="Zarejestruj się!">
+     	     	           	     	
+     	     	           	     </span>
+     	     	           	
+     	     	           </div>
+     	     	
+     	     </form>
+
+     	     </div>
+
+     </body>
+</html>

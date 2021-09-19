@@ -1,0 +1,94 @@
+/* ------------------ Tytuł ---------------- */
+.tytul {
+    margin: 5px auto;
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    border: 2px dashed #00F;
+}
+
+.tytul span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+/* --------------- Animowany tekst ----------- */
+#blok {
+    position: relative;
+    width: 500px;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin: 0 auto;
+    border: 3px solid #DDD;
+    font-size: 1.5em;
+    background-color: #EEE;
+    overflow: hidden;
+}
+
+#blok > p {
+    position: absolute;
+    margin: 0;
+    white-space: nowrap;
+    animation: przesun 20s linear infinite;
+}
+
+#blok > p:hover {
+    animation-play-state: paused;
+}
+
+@keyframes przesun {
+    0% { transform: translateX(0); padding-left: 110%;}
+    100% { transform: translateX(-100%); padding-left: 110%;}
+}
+
+@-webkit-keyframes przesun /* dla Google Chrome, Safari, Opera 15+ */
+{
+    0% { -webkit-transform:translateX(0); padding-left:110%; }
+    100% { -webkit-transform:translateX(-100%); padding-left:110%; }
+}
+
+/* ----------- Efekt wprowadzanego tekstu ------- */
+#blok2 {
+    position: relative;
+    float: left;
+    font-size: 1.8em;
+    font-family: 'FreeMono', monospace;
+    font-weight: bold;
+    background-color: #FFF;
+}
+
+#blok2 > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 1px solid transparent;
+    animation: pisz 10s steps(28), znak 1s step-end 10;
+}
+
+@keyframes pisz {
+    0% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes znak {
+    0% { border-left-color: transparent; }
+    50% { border-left-color: black; }
+    100% { border-left-color: transparent; }
+}
+
+@-webkit-keyframes pisz
+{
+    0% { width:100%; }
+    100% { width:0; }
+}
+
+@-webkit-keyframes znak
+{
+    0% { border-left-color:transparent; }
+    50% { border-left-color:black; }
+    100% { border-left-color:transparent; }
+} 
