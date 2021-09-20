@@ -96,3 +96,10 @@ function waliduj2() {
 	}
 
 }
+// Zdarzenia myszy
+let klik = document.getElementById("mysz");
+function zmien() {
+    klik.style.backgroundColor = "green";
+}
+
+klik.onclick = zmien;
