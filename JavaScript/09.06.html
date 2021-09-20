@@ -1,0 +1,121 @@
+<html>
+    <head>
+
+        <title>09.06</title>
+
+        <style>
+
+            * {
+                font-weight: bold;
+            }
+
+            #math {
+                color: blueviolet;
+                font-size: 20px;
+            }
+
+            #obiekt {
+                color: darkcyan;
+                font-size: 20px;
+            }
+
+            #obiekt2 {
+                color: darkcyan;
+                font-size: 20px;
+                height: auto;
+                width: 50%;
+                background-color: darkkhaki;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="math"><h1>Obiekt Math:</h1><br></div>
+        <div id="obiekt"><h1>Tworzenie własnego obiektu:</h1><br></div>
+        <div id="obiekt2">Ćwiczenie 1:<br>
+            <button onclick="info1()">Info o auto1</button><br>
+        </div>
+
+
+        <script>
+
+            document.getElementById("math").innerHTML += "Math.ceil(1,4) - zwraca sufit<br>";
+            document.getElementById("math").innerHTML += "Math.floor(1,6) - zwraca podłogę<br>"
+            document.getElementById("math").innerHTML += "Math.max(5,10) - zwraca max<br>";;
+            document.getElementById("math").innerHTML += "Math.min(5,10) - zwraca min<br>";
+            document.getElementById("math").innerHTML += "Math.pow(4,3) - 4^3<br>";
+            document.getElementById("math").innerHTML += "Math.random() - zwraca random z zakresu <0,1)<br>";
+                    //Math.floor(Math.random()*16);
+            document.getElementById("math").innerHTML += "Math.round(2,5) - zaokrąglenie, np.do 3<br>";
+            document.getElementById("math").innerHTML += "Math.ceil(1,4) - zwraca sufit<br>";
+            document.getElementById("math").innerHTML += "Math.sqrt(9) - pierwiastek z 9<br><br>";
+
+            /********************************************************************/
+
+            let Osoba = {
+                Imię: "Adam",
+                Nazwisko: "Kowalski",
+                Wiek: 34,
+                Wzrost: 180,
+                Zawód: "kierowca",
+                Dane: function() {
+                    return this.Imię + " " + this.Nazwisko + "   " + this.Wiek + " " + this.Wzrost + " " + this.Zawód+"<br><br>";
+                },
+
+                Wzór: function() {
+                    return "Imie: " + " Nazwisko: " + " Wiek: " + " Wzrost: " + " Zawód: <br>";
+                }
+            };
+
+            document.getElementById("obiekt").innerHTML += Osoba.Wzór() + Osoba.Dane();
+
+            /***************************************************************/
+
+            class Samochód {
+                constructor(marka, model, rok_produkcji, przebieg) {
+                    this.marka = marka;
+                    this.model = model;
+                    this.rok_produkcji = rok_produkcji;
+                    this.przebieg = przebieg;
+                }
+
+                    drukuj() {
+                        return this.marka + this.model + this.rok_produkcji + this.przebieg;
+                }
+            }
+
+            const sam1 = new Samochód("Audi", "A3", 2010, "175000 km");
+            const sam2 = new Samochód("Volksvagen", "Golf 5", 2012, "210000 km");
+            const sam3 = new Samochód("Nissan", "Juke", 2014, "140000 km");
+            const sam4 = new Samochód("Opel", "Corsa", 2008, "300000 km");
+
+
+            function info1() {
+             
+                for(x in sam1)
+                {
+                    document.getElementById("obiekt2").innerHTML += `${x}: ${sam1[x]}<br>`;
+                }
+
+                for(x in sam2)
+                {
+                    document.getElementById("obiekt2").innerHTML += `${x}: ${sam2[x]}<br>`;
+                }
+
+                for(x in sam3)
+                {
+                    document.getElementById("obiekt2").innerHTML += `${x}: ${sam3[x]}<br>`;
+                }
+
+                for(x in sam4)
+                {
+                    document.getElementById("obiekt2").innerHTML += `${x}: ${sam4[x]}<br>`;
+                }
+            }
+            
+
+        </script>
+    </body>
+</html>
