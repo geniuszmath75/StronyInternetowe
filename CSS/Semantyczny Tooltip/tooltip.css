@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    border: 3px solid #FDD700;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 15px;
+    border-top: 1px solid #FDD700;
+    color: #00F;
+    text-align: center;
+    text-decoration: none;
+    background-color: #EEE;
+}
+
+ul li:first-child a {
+    border-top: none;
+}
+
+ul li a:hover {
+    background-color: #FFF;
+}
+
+ul li:hover::before {
+    content: attr(data-tooltip);
+    width: 100%;
+    line-height: 2em;
+    padding: 15px;
+    border: 1px solid #000;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 0;
+    left: 105%;
+}
