@@ -1,0 +1,61 @@
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 1550px 800px;
+}
+
+.nav {
+	padding: 75px;
+	margin-right: 310px;
+	margin-left: 310px;
+	background-color: rgb(50, 100, 150);
+}
+.tresc {
+	margin: auto;
+	padding: 200px;
+	background-color: rgba(0, 200, 255, 0.9);
+	margin-top: 5px;
+    margin-right: 310px;
+	margin-left: 310px;
+}
+.stopka {
+	margin: auto;
+	padding: 50px;
+	background-color: rgba(0, 150, 255, 0.4);
+	margin-top: 5px;
+    margin-right: 310px;
+	margin-left: 310px;
+}
+.index {
+	margin-right: 40px;
+
+}
+.hardware {
+	margin-right: 40px;
+}
+.software {
+    margin-right: 40px; 
+}
+.kontakt {
+	margin-right: 40px;
+}
+a:link, a:visited {
+	background-color: #0099ff;
+    color: darkblue;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;;
+}
+a:hover {
+	text-decoration: none;
+	color: tomato;
+}
+a:active {
+	text-decoration: underline;
+	color: yellow;
+}
+#p1, #p2, #p3, #p4 {
+	font-size: 17px;
+	font-family: trebuchet;
+}

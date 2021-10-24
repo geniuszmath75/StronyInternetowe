@@ -1,0 +1,68 @@
+* {
+	font-size: 17px;
+	font-family: trebuchet;
+}
+
+.nav {
+	height: 200px;
+	width: 40%;
+	margin: auto;
+	margin-bottom: 5px;
+	background-color: rgb(50, 100, 150);
+	
+}
+.a {
+	margin: auto;
+	width: 40%;
+    display: block;
+}
+
+.index, .hardware, .software, .kontakt {
+	font-weight: bold;
+	padding: 12px;
+}
+
+a:link, a:visited {
+	background-color: #0099ff;
+    color: darkblue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:active, a:hover {
+	text-decoration: underline;
+	color: yellow;
+	display: inline-block;
+}
+
+.lewa, .środek, .prawa {
+	display: inline-block;
+	margin: auto;
+	height: 300px;
+	width: 33.3%;
+}
+.lewa {
+	background-color: rgba(0, 200, 255, 0.9);
+	float: left;
+}
+
+.środek {
+	background-color: rgba(0, 200, 255, 0.6);
+	float: left;
+	overflow: auto;
+}
+
+.prawa {
+	background-color: rgba(0, 200, 255, 0.3);
+}
+
+.stopka {
+	display: block;
+	margin: auto;
+    height: 100px;
+	width: 40%;
+	background-color: rgba(0, 150, 255, 0.4);
+}
+
+
