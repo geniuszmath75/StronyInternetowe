@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container mt-3">
+
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+        Przycisk
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <h5 class="dropdown-header" href="#">ZSEM</h5>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Opcja 1</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Opcja 2</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Opcja 3</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider" href="#">
+        <li>
+          <h5 class="dropdown-header" href="#">A tutaj 3p4</h5>
+        </li>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Pres</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container mt-3">
+    <h2>Card Image Overlay</h2>
+    <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+    <div class="card img-fluid" style="width:500px">
+      <img class="card-img-top" src="czcionka.png" alt="Card image" style="width:100%">
+      <div class="card-img-overlay">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. Some example text some example text. Some example text
+          some example text. Some example text some example text.</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="faq.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Najczęstsze pytania i odpowiedzi</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="czcionka.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Duże A</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="kowalski.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Pingwin Kowalski</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="faq.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="container mt-3">
+        <h2>Card titles, text, and links</h2>
+        <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom
+          margins for a p element if it is the last child (or the only one) in card-body. The .card-link class adds a
+          blue color to any link, and a hover effect.</p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container mt-3">
+        <h2>Basic Card</h2>
+        <div class="card bg-primary text-white">
+          <div class="card-header">Nagłówek</div>
+          <div class="card-body">Basic card</div>
+          <div class="card-footer">Stopka</div>
+        </div>
+      </div>
+
+
+      <div class="container mt-3">
+        <h2>Colored Spinners</h2>
+        <p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+      </div>
+
+      <div class="container mt-3">
+        <h2>Multiple Progress Bars</h2>
+        <p>Create a stacked progress bar by placing multiple bars into the same div with class="progress":</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width:40%">
+            Free Space
+          </div>
+          <div class="progress-bar bg-warning" style="width:10%">
+            Warning
+          </div>
+          <div class="progress-bar bg-danger" style="width:20%">
+            Danger
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+
+        <div class="spinner-border"></div>
+
+      </div>
+
+      <div class="container mt-3">
+        <h2>Multiple Progress Bars</h2>
+        <p>Create a stacked progress bar by placing multiple bars into the same div with class="progress":</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width:40%">
+            Free Space
+          </div>
+          <div class="progress-bar bg-warning" style="width:10%">
+            Warning
+          </div>
+          <div class="progress-bar bg-danger" style="width:60%">
+            Danger
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+        <h2>Colored Progress Bars</h2>
+        <p>Use any of the contextual color classes to change the color of the progress bar:</p>
+
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width:20%"></div>
+        </div><br>
+
+        <div class="container mt-3">
+          <h2>Progress Bar Height</h2>
+          <p>The height of the progress bar is 1rem (16px) by default. Use the CSS height property to change the height:
+          </p>
+          <div class="progress" style="height:10px">
+            <div class="progress-bar" style="width:40%;height:10px"></div>
+          </div>
+          <br>
+          <div class="progress" style="height:20px">
+            <div class="progress-bar" style="width:50%;height:20px"></div>
+          </div>
+          <br>
+          <div class="progress" style="height:30px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%;height:30px"></div>
+          </div>
+        </div>
+
+
+        <div class="container mt-3">
+          <h2>Basic Progress Bar</h2>
+          <p>To create a default progress bar, add a .progress class to a container element and add the progress-bar
+            class to its child element. Use the CSS width property to set the width of the progress bar:</p>
+          <div class="progress">
+            <div class="progress-bar" style="width:70%">70%</div>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Nesting Button Groups</h2>
+          <p>Nest button groups to create dropdown menus:</p>
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://tomek-pc/zsem/">tomek-pc</a></li>
+                <li><a class="dropdown-item" href="#">Smartphone</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary">Oppo</button>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Button Group</h2>
+          <p>Button groups are "inline" by default, which makes them appear side by side when you have multiple groups:
+          </p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+          </div>
+        </div>
+        <div class="container mt-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">BMW</button>
+            <button type="button" class="btn btn-primary">Mercedes</button>
+            <button type="button" class="btn btn-primary">Volvo</button>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Button Group</h2>
+          <p>The .btn-group class creates a button group:</p>
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Button Group</h2>
+          <p>The .btn-group class creates a button group:</p>
+          <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Animated Alerts</h2>
+          <p>The .fade and .show classes adds a fading effect when closing the alert message.</p>
+          <div class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+          </div>
+          <div class="alert alert-info alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+          </div>
+          <div class="alert alert-warning alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+          </div>
+          <div class="alert alert-primary alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Primary!</strong> Indicates an important action.
+          </div>
+          <div class="alert alert-secondary alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Secondary!</strong> Indicates a slightly less important action.
+          </div>
+          <div class="alert alert-dark alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Dark!</strong> Dark grey alert.
+          </div>
+          <div class="alert alert-light alert-dismissible fade show">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Light!</strong> Light grey alert.
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Alerts</h2>
+          <p>The button with class="btn-close" and data-bs-dismiss="alert" is used to close the alert box.</p>
+          <p>The alert-dismissible class aligns the button to the right.</p>
+          <div class="alert alert-success alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+          </div>
+          <div class="alert alert-info alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+          </div>
+          <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+          </div>
+          <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+          </div>
+          <div class="alert alert-primary alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Primary!</strong> Indicates an important action.
+          </div>
+          <div class="alert alert-secondary alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Secondary!</strong> Indicates a slightly less important action.
+          </div>
+          <div class="alert alert-dark alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Dark!</strong> Dark grey alert.
+          </div>
+          <div class="alert alert-light alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Light!</strong> Light grey alert.
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Alert Links</h2>
+          <p>Add the alert-link class to any links inside the alert box to create "matching colored links".</p>
+          <div class="alert alert-success">
+            <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-info">
+            <strong>Info!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-warning">
+            <strong>Warning!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-danger">
+            <strong>Danger!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-primary">
+            <strong>Primary!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-secondary">
+            <strong>Secondary!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-dark">
+            <strong>Dark!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+          <div class="alert alert-light">
+            <strong>Light!</strong> You should <a href="#" class="alert-link">read this message</a>.
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Alerts</h2>
+          <p>Alerts are created with the .alert class, followed by a contextual color classes:</p>
+          <div class="alert alert-success">
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+          </div>
+          <div class="alert alert-info">
+            <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+          </div>
+          <div class="alert alert-warning">
+            <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+          </div>
+          <div class="alert alert-danger">
+            <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+          </div>
+          <div class="alert alert-primary">
+            <strong>Primary!</strong> Indicates an important action.
+          </div>
+          <div class="alert alert-secondary">
+            <strong>Secondary!</strong> Indicates a slightly less important action.
+          </div>
+          <div class="alert alert-dark">
+            <strong>Dark!</strong> Dark grey alert.
+          </div>
+          <div class="alert alert-light">
+            <strong>Light!</strong> Light grey alert.
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <img src="obrazek.jpg" class="float-start" width="300" height="240">
+          <img src="obrazek.jpg" class="float-end" width="300" height="240">
+        </div>
+
+        <div class="container mt-3">
+          <h2>Basic Table</h2>
+          <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>
+          <table class="table">
+            <thead class="table-warning">
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="container border pt-3">
+          <div class="row">
+            <div class="col-sm-4 bg-primary">.col-sm-3</div>
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-sm-6 bg-success">test1</div>
+                <div class="col-sm-6 bg-warning">test2</div>
+              </div>
+            </div>
+            <div class="col-sm-4 bg-primary">.col-sm-3</div>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h1>Poniżej poprzednie zajęcia</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Link</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container mt-3">
+          <h2>Block Level Buttons</h2>
+          <p>To create a block level button that spans the entire width of the parent element, use the .d-grid "helper"
+            class on the parent element:</p>
+          <div class="container mt-3">
+            <h2>Block Level Buttons</h2>
+            <p>If you have many block-level buttons, you can control the space between them with the .gap-* class:</p>
+            <div class="d-grid gap-3">
+              <button type="button" class="btn btn-primary ">Full-Width Button</button>
+              <button type="button" class="btn btn-primary ">Full-Width Button</button>
+              <button type="button" class="btn btn-primary ">Full-Width Button</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Contextual Backgrounds</h2>
+          <p>Use the contextual background classes to provide "meaning through colors".</p>
+          <p>Note that you can also add a .text-* class if you want a different text color:</p>
+          <p class="bg-primary text-white">This text is important.</p>
+          <p class="bg-success text-white">This text indicates success.</p>
+          <p class="bg-info text-white">This text represents some information.</p>
+          <p class="bg-warning text-white">This text represents a warning.</p>
+          <p class="bg-danger text-white">This text represents danger.</p>
+          <p class="bg-secondary text-white">Secondary background color.</p>
+          <p class="bg-dark text-white">Dark grey background color.</p>
+          <p class="bg-light text-dark">Light grey background color.</p>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Opacity Text Colors</h2>
+          <p>Add 50% opacity for black or white text with the .text-black-50 or .text-white-50 classes:</p>
+          <p class="text-black-50">Black text with 50% opacity on white background</p>
+          <p class="text-white-50 bg-dark">White text with 50% opacity on black background</p>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Contextual Colors</h2>
+          <p>Use the contextual classes to provide "meaning through colors":</p>
+          <p class="text-muted">This text is muted.</p>
+          <p class="text-primary">This text is important.</p>
+          <p class="text-success">This text indicates success.</p>
+          <p class="text-info">This text represents some information.</p>
+          <p class="text-warning">This text represents a warning.</p>
+          <p class="text-danger">This text represents danger.</p>
+          <p class="text-secondary">Secondary text.</p>
+          <p class="text-dark">This text is dark grey.</p>
+          <p class="text-body">Default body color (often black).</p>
+          <p class="text-light">This text is light grey (on white background).</p>
+          <p class="text-white">This text is white (on white background).</p>
+        </div>
+
+        <div class="container mt-3">
+          <h1>Keyboard Inputs</h1>
+          <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+          <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+        </div>
+
+        <div class="container mt-3">
+          <h1>Code Snippets</h1>
+          <p>Inline snippets of code should be embedded in the code element:</p>
+          <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a
+            section in a document.</p>
+        </div>
+
+        <div class="container p-5 my-5 bg-primary text-white">
+          <div class="container mt-3">
+            <h1>Blockquotes</h1>
+            <p>The blockquote element is used to present content from another source:</p>
+            <blockquote class="blockquote">
+              <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+                organization, WWF works in 100 countries and is supported by 1.2 million members in the United States
+                and close to 5 million globally.</p>
+              <footer class="blockquote-footer">From WWF's website</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="container mt-3">
+          <h1>Highlight Text</h1>
+          <p>Use the mark element (or the .mark class) to <mark>highlight</mark> text.</p>
+        </div>
+
+        <div class="container mt-3">
+          <h1>Display Headings</h1>
+          <p>Display headings are used to stand out more than normal headings (larger font-size and lighter
+            font-weight):</p>
+          <h1 class="display-1">Display 1</h1>
+          <h1 class="display-2">Display 2</h1>
+          <h1 class="display-3">Display 3</h1>
+          <h1 class="display-4">Display 4</h1>
+          <h1 class="display-5">Display 5</h1>
+          <h1 class="display-6">Display 6</h1>
+        </div>
+
+        <div class="container mt-3">
+          <p>The font-size of each Bootstrap heading depends on the screen size. Try to resize the browser window to see
+            the effect.</p>
+          <h1>h1 Bootstrap heading</h1>
+          <h2>h2 Bootstrap heading</h2>
+          <h3>h3 Bootstrap heading</h3>
+          <h4>h4 Bootstrap heading</h4>
+          <h5>h5 Bootstrap heading</h5>
+          <h6>h6 Bootstrap heading</h6>
+        </div>
+
+        <div class="container p-5 my-5 border">
+          <h1>My First Bootstrap Page</h1>
+          <p>This container has a border and some extra padding and margins.</p>
+        </div>
+
+        <div class="container p-5 my-5 bg-dark text-white">
+          <h1>My First Bootstrap Page</h1>
+          <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+        </div>
+
+        <div class="container p-5 my-5 bg-primary text-white">
+          <h1>My First Bootstrap Page</h1>
+          <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm bg-dark text-white">
+              1 z 3
+            </div>
+            <div class="col-sm-6 bg-primary text-white">
+              2 z 3
+            </div>
+            <div class="col-sm bg-dark text-white">
+              3 z 3
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <h1>My First Bootstrap Page</h1>
+          <p>This part is inside a .container class.</p>
+          <p>The .container class provides a responsive fixed width container.</p>
+          <p>Resize the browser window to see that the container width will change at different breakpoints.</p>
+        </div>
+
+        <div class="container-fluid">
+          <h1>My First Bootstrap Page</h1>
+          <p>This part is inside a .container-fluid class.</p>
+          <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>
+        </div>
+
+        <div class="container mt-3">
+          <h2>Pagination - Active State</h2>
+          <p>Add class .active to let the user know which page he/she is on:</p>
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+          </ul>
+        </div>
+
+</body>
+
+</html>
