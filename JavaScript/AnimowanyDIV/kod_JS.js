@@ -1,14 +1,15 @@
 let x = document.getElementById("DIV");
-let y = window.innerWidth - 200;
-let position = parseInt(x.style.left);
-console.log(position);
+let y = parseInt(window.innerWidth) - 197;
 
-if(position != 0)
-{
-    x.style.transform = `translateX(-${y}px)`;
-    x.style.transition = "all 2s linear";
-}else
-{
-    x.style.transform = `translateX(${y}px)`;
-    x.style.transition = "all 1s linear";
+setInterval(move, 500);
+
+function move() {
+    x.style.transform = `translate(${y}px)`;
+    x.style.transform = `translate(-${y}px)`;
+    x.style.transition = "3s linear";
 }
+        
+
+            
+
+
