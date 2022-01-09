@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraMemory</title>
+    <style>
+
+        #main {
+            position: absolute;
+            float: left; 
+        }
+
+        #results {
+            position: absolute;
+            right: 0;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #tabelka, tr, td {
+            border-collapse: collapse;
+            border: 2px solid gold;
+        }
+
+        #start {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            margin: 0px;
+            background-color: lightgreen;
+            border: 3px solid black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <table id="tabelka">
+            <tr>
+                <td>
+                    <img onclick="click()" id="img1" src="images/arbuz.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img2" src="images/wisnia.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img3" src="images/sliwka.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img4" src="images/banan.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img onclick="click()" id="img5" src="images/pomarancza.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img6" src="images/truskawka.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img7" src="images/cytryna.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img8" src="images/jablko.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img onclick="click()" id="img9" src="images/sliwka.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img10" src="images/pomarancza.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img11" src="images/wisnia.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img12" src="images/cytryna.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img onclick="click()" id="img13" src="images/banan.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img14" src="images/jablko.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img15" src="images/arbuz.png">
+                </td>
+                <td>
+                    <img onclick="click()" id="img16" src="images/truskawka.png">
+                </td>
+            </tr>
+        </table>
+
+        
+        
+    </div>
+
+    <div id="results">
+        <span id="score">
+            Punktacja:
+        </span>
+        <br>
+        <span id="time">
+            Czas gry:
+        </span>
+    </div>
+
+    <button id="start" onclick="memory()">Rozpocznij grę</button>
+
+    <script src="kod_JS.js"></script>
+
+</body>
+</html>
